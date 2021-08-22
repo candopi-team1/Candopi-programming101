@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Transition</title>
+	<style>
+		a.box {
+			display:block;
+			width: 100px;
+			height: 100px;
+			background: #00f;
+			border: 1px solid #000;
+			-webkit-transition: all 3s linear;	/* CLUE: all 5s linear; */	/* CLUE: all 10s linear; */
+		}
+
+		a.box:hover {
+			background: #f00;
+		}		
+		
+	</style>
+</head>
+<body>
+	<a href="#" class="box"></a> <BR>
+
+ <div>
+          <h3>Instructions</h3>
+           <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code changes the rate of change of color.</p>
+<p>Please vary the speed of color transition.</p>
+
+
+  <p>Clue: Look for the word "clue" in the codes, and take out the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+ 
+</p>
+
+<p>
+
+"all 3s linear;"  is too fast
+<br>
+"all 10s linear;" is too slow
+</p> 
+
+
+      </div>
+
+
+</body>
+</html>

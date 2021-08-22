@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Transform Rotate</title>
+	<style>
+		a.box {
+			display:block;
+			width: 100px;
+			height: 100px;
+			background: #00f;
+			border: 1px solid #000;
+			-webkit-transition: all .5s linear;	
+			-webkit-transform: translate(100px, 50px) ;					
+		}
+		a.box:hover {
+			background: #f00;
+			-webkit-transform: translate(100px, 50px) scale(1.1) rotate(10deg); 
+                        /* -webkit-transform: translate(100px, 50px) scale(2.1) rotate(40deg); */     /* CLUE */
+
+		}
+		
+		
+		
+	</style>
+</head>
+<body>
+	<a href="#" class="box"></a><br><br><br>
+
+
+   <div>
+          <h3>Instructions</h3>
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code changes the color.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+ 
+  </p>
+
+<p>Please modify the code to make the box bigger and rotate more.</p>
+
+
+</body>
+</html>
