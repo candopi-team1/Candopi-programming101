@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   <title> Selection Sort   </title> 
+</head>
+
+ <body>
+<h2>Selection Sort</h2>
+
+<form name="form1">
+  Value1:        <input type="text" name="val1"><br>
+  Value2:        <input type="text" name="val2"><br>
+  Value3:        <input type="text" name="val3"><br>
+  Value4:        <input type="text" name="val4"><br>
+  Value5:        <input type="text" name="val5"><br><br>
+
+
+  <input type="button" name="calc" value="Selection Sort" onclick="sort(form1)">
+
+<br><br>
+
+Sorted Numbers:<input type="text" name="sortedNumbers">
+
+</form>
+
+<br>
+<h2>Analyzing Results</h2>
+<div id="solution1"></div>
+      
+<script type="text/javascript">
+function sort(formObj){
+  var val1 = parseFloat(formObj.val1.value);
+  var val2 = parseFloat(formObj.val2.value);  
+  var val3 = parseFloat(formObj.val3.value);
+  var val4 = parseFloat(formObj.val4.value);
+  var val5 = parseFloat(formObj.val5.value);
+
+  var array1=[val1, val2,val3,val4, val5];
+  document.getElementById("solution1").innerHTML ='';
+  
+
+  // OK var array_ret=bubbleSort([2,6, 11, 2, 3, 14, 5]);
+  var array_ret=selectionSort(array1);
+  // OK alert(array_ret);
+  formObj.sortedNumbers.value = array_ret;
+  
+  return;
+}
+
+
+
+
+function selectionSort(items) {
+    var len = items.length,
+        min;
+
+    for (var i = 0; i < len; i++) {
+        // set minimum to this position
+        min = i;
+        //check the rest of the array to see if anything is smaller
+        for (j = i + 1; j < len; j++) {
+            if (items[j] < items[min]) {
+                min = j;
+            }
+        }
+        //if the minimum isn't in the position, swap it
+        if (i != min) {
+            swap(items, i, min);
+            document.getElementById("solution1").innerHTML +=  '<p>&nbsp; &nbsp; &nbsp; &nbsp; Swapping ' +  items[i] + ' and '+ items[min] + '</p>';
+
+
+        }
+        document.getElementById("solution1").innerHTML +=  '<p> Loop ' + (i+1)+ ' --> '+ items + '</p>';
+
+
+    }
+
+    return items;
+}
+
+
+function swap(array, index1, index2) {
+    var temp = array[index1];
+    array[index1] = array[index2];
+    array[index2] = temp;
+}
+
+
+
+
+</script>
+
+
+ </body>
+</html>

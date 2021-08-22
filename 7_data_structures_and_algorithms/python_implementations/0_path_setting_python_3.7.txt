@@ -1,0 +1,42 @@
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\code_class_javascript\2000USD_6months_0USD_10days\7_data_structures_and_algorithms\python_implementations
+
+(1)
+python bubble_sort.py
+python selection_sort.py
+python  insertion_sort.py
+
+(2)
+python  merge_sort.py
+python  merge_sort.py -->  merging.txt
+python merge_hmk.py
+python merge_sort2_hmk.py
+
+
+/// QUICK SORT
+(1)
+python  quick_sort.py             
+python  quick_sort2.py            
+python  quick_sort2.py  > quick_sort2_LPv_List.txt
+
+python  quick_sort_partition_test.py > partition_test1.txt
+
+(2)
+python  quick_sort_geeks.py        
+python  quick_sort_cplusplus.py    
+
+
+(3) BAD with 3 dups --> Fixed and now CORRECT ;-)
+python  quick_sort_commonsense.py   
+
+(4)
+python selection_sort_dummies.py
+python insertion_sort_dummies.py
+
+python  merge_sort_dummies.py
+
+python quick_sort_dummies.py
+

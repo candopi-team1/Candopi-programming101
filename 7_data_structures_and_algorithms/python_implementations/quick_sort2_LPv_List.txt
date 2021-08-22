@@ -1,0 +1,35 @@
+[88, 1, 9, 80, 19, 64, 25, 20, 21]
+Partition gets    ... List= [88, 1, 9, 80, 19, 64, 25, 20, 21] , pv= 19 , R= 8 , L= 0
+swap 19  and  88
+Partition returns ... List= [19, 1, 9, 80, 88, 64, 25, 20, 21] , pv= 19 , R= 2 , L= 3
+leftList [19, 1]
+Partition gets    ... List= [19, 1, 9, 80, 88, 64, 25, 20, 21] , pv= 1 , R= 2 , L= 0
+swap 1  and  19
+Partition returns ... List= [1, 19, 9, 80, 88, 64, 25, 20, 21] , pv= 1 , R= 0 , L= 1
+rightList [19]
+Partition gets    ... List= [1, 19, 9, 80, 88, 64, 25, 20, 21] , pv= 19 , R= 2 , L= 1
+swap 9  and  19
+Partition returns ... List= [1, 9, 19, 80, 88, 64, 25, 20, 21] , pv= 19 , R= 1 , L= 2
+rightList [80, 88, 64, 25, 20]
+Partition gets    ... List= [1, 9, 19, 80, 88, 64, 25, 20, 21] , pv= 64 , R= 8 , L= 3
+swap 21  and  80
+swap 20  and  88
+swap 25  and  64
+Partition returns ... List= [1, 9, 19, 21, 20, 25, 64, 88, 80] , pv= 64 , R= 5 , L= 6
+leftList [21, 20]
+Partition gets    ... List= [1, 9, 19, 21, 20, 25, 64, 88, 80] , pv= 20 , R= 5 , L= 3
+swap 20  and  21
+Partition returns ... List= [1, 9, 19, 20, 21, 25, 64, 88, 80] , pv= 20 , R= 3 , L= 4
+rightList [21]
+Partition gets    ... List= [1, 9, 19, 20, 21, 25, 64, 88, 80] , pv= 21 , R= 5 , L= 4
+swap 21  and  21
+Partition returns ... List= [1, 9, 19, 20, 21, 25, 64, 88, 80] , pv= 21 , R= 3 , L= 5
+rightList [64, 88]
+Partition gets    ... List= [1, 9, 19, 20, 21, 25, 64, 88, 80] , pv= 88 , R= 8 , L= 6
+swap 80  and  88
+Partition returns ... List= [1, 9, 19, 20, 21, 25, 64, 80, 88] , pv= 88 , R= 7 , L= 8
+leftList [64]
+Partition gets    ... List= [1, 9, 19, 20, 21, 25, 64, 80, 88] , pv= 64 , R= 7 , L= 6
+swap 64  and  64
+Partition returns ... List= [1, 9, 19, 20, 21, 25, 64, 80, 88] , pv= 64 , R= 5 , L= 7
+[1, 9, 19, 20, 21, 25, 64, 80, 88]
