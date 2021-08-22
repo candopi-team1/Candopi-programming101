@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Loops and Functions  </title> 
+
+    <style>
+     #result1{
+        margin:0.2em; padding:2em;
+        background-color: #bbcada;
+        white-space:pre;
+     }
+    </style>
+
+ </head>
+
+ <body>
+
+
+<button id="button_hello"> Say Hello </button>
+<button id="button_hellos"> Say Hellos </button>
+
+<button id="button_his"> Say Hi's </button>
+
+
+<h3>Results</h3>
+<div id="result1"> </div>
+
+  <div>
+          <h3>Instructions</h3>
+  
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code works.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+   </pre> 
+  </p>
+      </div>
+
+
+ <script>
+ let button_hello= document.querySelector("#button_hello");
+ let button_hellos= document.querySelector("#button_hellos");
+ let button_his= document.querySelector("#button_his");
+
+ let result1= document.querySelector("#result1");
+ 
+
+ 
+ button_hello.addEventListener("click", sayHello, false);
+ button_hellos.addEventListener("click", sayHellos, false);
+ button_his.addEventListener("click", sayHis, false);
+
+
+
+  function sayHello(e) {
+      result1.textContent="Hello!";
+  }
+
+  function sayHellos(e) {
+      result1.textContent="Let me greet 3 times.    ";
+      for(let i=0; i <10; i++){
+         if( i> 2){ // clue : Not greater than 2. No more than 3 times. i.e. 0,1,2.
+           break;
+         }
+         result1.textContent= result1.textContent+ "Hello!  ";
+
+      }
+  }
+
+   function sayHis(e) {
+      result1.textContent="I greet for every even number!!!    ";
+      let i=0;
+
+      while(i<100){
+        if ( (i%35) ==0){ // clue : divisible by 35
+           result1.textContent= result1.textContent+ "\r\n\r\nFor any number divisible by 35: Hi-" + i+"!\r\n"; // \r\n for next or new line
+        }
+
+        if ( (i%2) ==0){   // clue  : divisible by 2      
+            result1.textContent= result1.textContent+ "Hi!  " + i+ "     ";
+        }
+
+        i++;
+      }
+
+  }
+
+
+ </script>
+   
+
+ </body>
+</html>

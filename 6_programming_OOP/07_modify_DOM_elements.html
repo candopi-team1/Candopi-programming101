@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Modify DOM Elements </title> 
+
+ </head>
+
+ <body>
+
+<h1 id="head1">Headline One</h1>
+<button id="button_head1">Change Heading 1</button>
+
+<br><br>
+
+
+
+<div id="main">
+  <div class="imgContainer"> 
+    <img class="theImage" src="Bagan_pagodas.jpg" height="auto" width="auto" />
+ </div>
+
+</div>
+<br>
+
+
+<button id="button_shrink_images"> Shrink Images</button>
+<button id="button_enlarge_images"> Enlarge Images</button>
+<button id="button_image_change"> Change Image</button>
+
+
+  <div>
+          <h3>Instructions</h3>
+  
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code works.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+   </pre>
+  </p>
+
+    <p>Please change the heading's color. Change the image's size.  Change to a different image, etc.</p>
+
+      </div>
+
+
+ <script>
+ let button_head1= document.querySelector("#button_head1");
+ button_head1.addEventListener("click", changeHead1, false);
+ function changeHead1(e) {
+      let head1= document.querySelector("#head1");;
+      head1.textContent="Stop Waiting for Godot!!"; // clue:  text
+      head1.style.color= "#1914fa";                 // clue: color
+  }
+
+
+
+
+ let button_shrink_images= document.querySelector("#button_shrink_images");
+ let images= document.querySelectorAll("div.imgContainer img.theImage");
+ let button_enlarge_images= document.querySelector("#button_enlarge_images");
+
+ let button_image_change= document.querySelector("#button_image_change");
+
+ 
+ button_shrink_images.addEventListener("click", shrinkImages, false);
+ button_enlarge_images.addEventListener("click", enlargeImages, false);
+ button_image_change.addEventListener("click", changeImage, false);
+
+
+
+  function shrinkImages(e) {
+      for(let i=0; i< images.length; i++){
+           let image=images[i];
+           // console.log(image.getAttribute("src"));          
+           image.style.width= "88px"; // clue: image size
+      }
+  }
+
+  function enlargeImages(e) {
+      for(let i=0; i< images.length; i++){
+           let image=images[i];       
+           image.style.width= "450px"; // clue: image size
+      }
+  }
+ function changeImage(e) {
+           let image=images[0];
+           image.src="myanmar_kids6.jpg"; // clue: a different image
+           image.style.width= "388px";
+           
+      
+  }
+
+ </script>
+   
+
+ </body>
+</html>

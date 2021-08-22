@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+   <title> Mouse Position  </title> 
+
+    <style>
+       #result1{
+        margin:0.2em; padding:2em;
+        background-color: #efefef;
+     }
+    
+    </style>
+
+ </head>
+
+ <body>
+
+
+<!-- button id="button1"> Button 1</button -->
+
+<h3>Where is your Mouse?</h3>
+<div id="result1"> </div>
+
+<br>
+   <div>
+          <h3>Instructions</h3>
+  <p>Move the mouse to four corners, and see how the coordinate values change.</p>
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code tracks the mouse's coordinates.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+ 
+  </p>
+
+
+
+      </div>
+
+
+
+ <script>
+ // let button1= document.querySelector("#button1");
+ let result1= document.querySelector("#result1");
+
+ document.addEventListener("mousemove", mouseMoving, false);
+
+  function mouseMoving(e) {
+      // OK console.log(e.clientX+ '  '+ e.clientY);
+
+      result1.textContent="Distance from Right:= "+ e.clientX+ "; Distance from  Top= "+ e.clientY; // clue
+
+  }
+
+ </script>
+   
+
+ </body>
+</html>

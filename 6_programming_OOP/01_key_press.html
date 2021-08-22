@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   <title>  Key Press   </title> 
+
+    <style>
+      #result1{
+        margin:0.2em; padding:2em;
+        background-color: #efefef;
+     }
+    
+    </style>
+
+ </head>
+
+ <body>
+
+
+
+
+<h3>Which Key Did You Press?</h3>
+<div id="result1"> </div>
+
+<br>
+   <div>
+          <h3>Instructions</h3>
+  
+<p>Press small 'a', 'b', 'c', or 'd'.</p>
+<p>Or press arrowkeys: Left, Right, Up or Down.</p>
+
+
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code tracks the key.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+ 
+  </p>
+
+     </div>
+
+
+
+ <script> 
+  window.addEventListener("keydown", checkKeyPressed, false);
+
+  function checkKeyPressed(e) {
+      if(e.keyCode == 65){ // clue 
+         result1.textContent=result1.textContent + "You pressed key 'a' .";
+      }
+      if(e.keyCode == 66){
+         result1.textContent=result1.textContent + "You pressed key 'b' .";
+      }
+
+      if(e.keyCode == 67){
+         result1.textContent=result1.textContent + "You pressed key 'c' .";
+      }
+      if(e.keyCode == 68){
+         result1.textContent=result1.textContent + "You pressed key 'd' .";
+      }
+
+
+
+      if(e.keyCode == 37){ // clue
+         result1.textContent=result1.textContent + "You pressed key 'Left' .";
+      }
+
+
+      if(e.keyCode == 38){
+         result1.textContent=result1.textContent + "You pressed key 'Up' .";
+      }
+
+
+      if(e.keyCode == 39){
+         result1.textContent=result1.textContent + "You pressed key 'Right' .";
+      }
+
+      if(e.keyCode == 40){
+         result1.textContent=result1.textContent + "You pressed key 'Down' .";
+      }
+
+
+  }
+
+
+
+
+
+ </script>
+   
+
+ </body>
+</html>

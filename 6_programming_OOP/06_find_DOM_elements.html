@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title> Find DOM Elements </title> 
+
+ </head>
+
+ <body>
+<div id="main">
+
+  <div class="imgContainer"> 
+    <img class="theImage" src="Bagan_pagodas.jpg" height="auto" width="auto" />
+ </div>
+
+  <div class="imgContainer"> 
+    <img class="theImage" src="myanmar_kids6.jpg" height="auto" width="auto" />
+ </div>
+
+
+  <div class="imgContainer"> 
+    <img class="theImage" src="myanmar_kids3.jpg"  height="auto" width="auto"  />
+ </div>
+
+
+</div>
+
+<br>
+<button id="button_main"> Button Main</button>
+
+<button id="button_images"> Shrink Images</button>
+<button id="button_images2"> Enlarge Images</button>
+
+
+<button id="button_image2"> Shrink Image2</button>
+ <!--  clue: copy one of the above.  -->
+  <div>
+          <h3>Instructions</h3>
+  
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code works.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+   </pre>
+
+  </p>
+  <p>Please add another button to change one or all images.</p>
+
+
+
+      </div>
+
+
+ <script>
+ let button_main= document.querySelector("#button_main");
+ let main= document.querySelector("#main");
+
+ let button_images= document.querySelector("#button_images");
+ let images= document.querySelectorAll("div.imgContainer img.theImage");
+ let button_images2= document.querySelector("#button_images2");
+ let button_image2= document.querySelector("#button_image2");
+ // CLUE: copy one of the above.
+
+ 
+ button_main.addEventListener("click", shrinkMain, false);
+ button_images.addEventListener("click", shrinkImages, false);
+ button_images2.addEventListener("click", enlargeImages, false);
+ button_image2.addEventListener("click", shrinkImage2, false);
+ // CLUE:  copy one of the above.
+
+
+  function shrinkMain(e) {
+      // console.log(main.style.width);
+      main.style.width= "20";
+      main.style.backgroundColor= "#daeafa";   
+  }
+
+
+  function shrinkImages(e) {
+      for(let i=0; i< images.length; i++){
+           let image=images[i];
+           // console.log(image.getAttribute("src"));          
+           image.style.width= "88px";
+      }
+  }
+
+  function enlargeImages(e) {
+      for(let i=0; i< images.length; i++){
+           let image=images[i];       
+           image.style.width= "auto";
+      }
+  }
+ function shrinkImage2(e) {
+           let image=images[1];
+           image.style.width= "88px";      
+  }
+ // CLUE:  copy one of the above functions, and edit a bit.
+
+ </script>
+   
+
+ </body>
+</html>

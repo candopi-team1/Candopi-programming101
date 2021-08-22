@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Good ions can't surprise you." />
+ <meta name="keywords" content="coding, CS,empowerment" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title> Mouse Click  </title> 
+
+    <style>
+     #result1{
+        margin:0.2em; padding:2em;
+        background-color: #bbcada;
+     }
+    </style>
+ </head>
+
+ <body>
+
+
+<button id="button1"> Button 1</button>
+<button id="button2"> Button 2</button>
+
+
+<h3>Which Button Did You Click?</h3>
+<div id="result1"> </div>
+
+  <div>
+          <h3>Instructions</h3>
+  <p>Button 2 shows the Mouse's X coordinate, unlike Button 1.</p>
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code observes the buttons.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+ 
+  </p>
+
+     <p>Please add another similar button.</p>
+
+     <p>There are many other types of  events and mouse events. You can safely ignore them now.</p>
+
+
+      </div>
+
+
+
+
+ <script>
+  let button1= document.querySelector("#button1"); // clue: first button
+  let button2= document.querySelector("#button2");
+  
+  let result1= document.querySelector("#result1");
+ 
+
+ 
+ button1.addEventListener("click", click1, false); // clue: first button links up with some functionality
+ button2.addEventListener("click", click2, false);
+
+  function click1(e) { // clue: functionality for first button
+      result1.textContent="You clicked Button1.";
+  }
+
+  function click2(e) {
+      result1.textContent= result1.textContent + "   You clicked Button2 at " + e.clientX;
+  }
+
+
+ </script>
+   
+
+ </body>
+</html>

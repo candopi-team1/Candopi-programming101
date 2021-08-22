@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Good ions can't surprise you." />
+ <meta name="keywords" content="coding, CS,empowerment" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title> Mouse Hover  </title> 
+
+    <style>
+     #result1{
+        margin:0.2em; padding:2em;
+        background-color: #efefef;
+     }
+    
+
+      .blocky{
+         display: block;
+         width: 6em;
+         height: 6em; margin-top:1em; margin-bottom:1em;
+       }
+
+      #block1{      background-color: red;    }
+      #block2{      background-color: blue;   }
+      #block3{      background-color: yellow;   }
+
+
+    </style>
+
+ </head>
+
+ <body>
+
+
+<div id="block1" class="blocky" name="One">Hope</div><br>
+
+
+<div id="block2" class="blocky" name="Two">Power</div><br>
+
+<div id="block3" class="blocky" name="Three">Kindness</div>
+
+
+
+<h3>Which Block Did You Enter?</h3>
+<div id="result1"> </div>
+<br>
+   <div>
+          <h3>Instructions</h3>
+  <p>Enter into a box and go out slowly,keep watching the report/message change.</p>
+
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code track the mouse movements.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+   </pre>
+ 
+  </p>
+
+
+      </div>
+
+
+
+
+ <script>
+ let block1= document.querySelector("#block1");
+  let block2= document.querySelector("#block2");
+  let block3= document.querySelector("#block3"); // clue
+  
+  let result1= document.querySelector("#result1");
+ 
+
+ 
+ block1.addEventListener("mouseover", hovered, false);
+ block1.addEventListener("mouseout", hoveredOut, false);
+
+ block2.addEventListener("mouseover", hovered, false);
+ block2.addEventListener("mouseout", hoveredOut, false);
+
+ block3.addEventListener("mouseover", hovered, false); // clue
+ block3.addEventListener("mouseout", hoveredOut, false);// clue
+
+
+  function hovered(e) { // clue
+      let source= e.srcElement;
+      result1.textContent="You hovered Block-"+ source.getAttribute("name") +" .";
+  }
+
+  function hoveredOut(e) { // clue
+      let source= e.srcElement;
+      result1.textContent="You hovered away from Block-"+ source.getAttribute("name") +" .";
+  }
+
+ 
+
+ </script>
+   
+
+ </body>
+</html>

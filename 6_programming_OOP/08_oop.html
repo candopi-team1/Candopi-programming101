@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>OOP</title> 
+
+    <style>
+     #result1{
+        margin:0.2em; padding:2em;
+        background-color: #bbcada;
+        white-space:pre;
+     }
+    </style>
+ </head>
+
+ <body>
+<button id="button_a"> Animal</button>
+<button id="button_e"> Eagle</button>
+<button id="button_b"> Buffalo</button>
+<button id="button_h"> Human</button>
+<button id="button_s"> Shark</button>
+
+<button id="button_poly">Animal Polymorphism</button>
+
+
+<h3>Result</h3>
+<div id="result1"> </div>
+
+  <div>
+          <h3>Instructions</h3>
+  
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code works. In particular, how classes and objects work.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+ 
+  </p>
+          <h3>Object Orientation Lesson</h3>
+<p>Animal is abstract. It's a super/parent or top-most class. Other classes descend from it.</p>
+<p>Other classes are concrete. They are sub classes or children classes.</p>
+<p>All subclasses recieve the properties and functionalities of the parent.
+They get automatically:
+<ol>
+ <li>all properties declared in the super-class</li>
+ <li>all functionalities defined in the super-class</li>
+
+</ol>
+
+</p>
+
+<p>If a subclass doesn't rewrite a function, it uses the super-class's function. E.g.In our code, only the Human class re-writes all the 3 functions :
+move(),fight() and eat().</p>
+
+<p>A subclass can have more properties and functions, in addition to those inherited from the parent/super-class.
+e.g. A shrak has jaw-stregth property. A human has an education property.
+e.g. Only human can dance in the code.</p>
+
+      </div>
+
+ <script>
+
+class Animal {
+    constructor(name, terrain, speed){
+      this.name = name; 
+      this.terrain = terrain;
+      this.speed = speed;
+     }
+
+    move(){
+        return("For sub-class to develop ........................... move");
+    }
+
+    eat(){
+        return("For sub-class to develop ............................ eat");
+    }
+
+    fight(){
+        return("For sub-class to develop .......................... fight");
+    }
+
+}
+
+
+class Eagle extends Animal {
+    constructor(name, terrain, speed, wingSpan){
+      super(name, terrain, speed);
+      this.wingSpan = wingSpan; 
+     }
+
+    move(){
+        return("Flying");
+    }
+
+} // Eagle
+
+
+
+class Buffalo extends Animal {
+    constructor(name, terrain, speed, hornSpan){
+      super(name, terrain, speed);
+      this.hornSpan = hornSpan; 
+     }
+
+    move(){
+        return("Galloping");
+    }
+    fight(){
+        return("I butt and gore with my horns.");
+    }
+
+
+} // Buffalo
+
+
+class Human extends Animal {
+    constructor(name, terrain, speed, education){
+      super(name, terrain, speed);
+      this.education = education; 
+     }
+
+    move(){
+        return("Walking, flying, swimmming, ... ");
+    }
+    eat(){
+        return("I eat with hands, with spoons and forks and knives.");
+    }
+
+    fight(){
+        return("I use hands and feet. I use spaceships and laser canons and light sabres. I also use words and musics ;-) .");
+    }
+
+    dance(){
+        return("Dancing Swing, Break dance, Hip Hop, cha cha, Tango etc ... ");
+    }
+} // Human
+
+
+class Shark extends Animal {
+    constructor(name, terrain, speed, jaw_strength){
+      super(name, terrain, speed);
+      this.jaw_strength = jaw_strength; 
+     }
+
+    move(){
+        return("Swimmming.");
+    }
+
+    eat(){
+        return("I bite and swallow.");
+    }
+
+
+} // Shark
+
+
+
+
+  let button_a= document.querySelector("#button_a");
+  let button_e= document.querySelector("#button_e");
+  let button_b= document.querySelector("#button_b");
+  let button_h= document.querySelector("#button_h");
+  let button_s= document.querySelector("#button_s");
+
+  let button_poly= document.querySelector("#button_poly");
+
+  let result1= document.querySelector("#result1");
+
+
+ 
+ button_a.addEventListener("click", click_a, false);
+ button_e.addEventListener("click", click_e, false);
+ button_b.addEventListener("click", click_b, false);
+ button_h.addEventListener("click", click_h, false);
+ button_s.addEventListener("click", click_s, false);
+ button_poly.addEventListener("click", click_poly, false);
+
+ 
+
+
+  function click_a(e) {
+      let myAnimal = new Animal("monkey", "land", 100);
+      result1.textContent= "Name="+ myAnimal.name+ "; Terrain= "+ myAnimal.terrain + "; Speed=" +  myAnimal.speed ;
+
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.move();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.eat();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.fight();
+
+  }
+
+
+ function click_e(e) {
+      let myAnimal = new Eagle("Eagle", "air", 400, 2);
+      //GOOD result1.setAttribute('style','white-space:pre;');
+      result1.textContent= "Name="+ myAnimal.name+ "; Terrain= "+ myAnimal.terrain + "; Speed=" +  myAnimal.speed + "; \r\n";
+      result1.textContent= result1.textContent+ "Wing Span="+  myAnimal.wingSpan;
+
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.move();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.eat();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.fight();
+  }
+
+
+
+ function click_b(e) {
+      let myAnimal = new Buffalo("buffalo", "land", 100, 1);
+      result1.textContent= "Name="+ myAnimal.name+ "; Terrain= "+ myAnimal.terrain + "; Speed=" +  myAnimal.speed + "; \r\n" ;
+      result1.textContent= result1.textContent+ "Horn Span="+  myAnimal.hornSpan;
+
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.move();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.eat();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.fight();
+  }
+
+
+ function click_h(e) {
+      let myAnimal = new Human("Tom Cruise", "space, air, land, sea", 50, "BA, MA, MComp, PhD");
+      result1.textContent= "Name="+ myAnimal.name+ "; Terrain= "+ myAnimal.terrain + "; Speed=" +  myAnimal.speed + "; \r\n";
+      result1.textContent= result1.textContent+ "Education="+  myAnimal.education;
+
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.move();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.eat();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.fight();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.dance();
+  }
+
+
+ function click_s(e) {
+      let myAnimal = new Shark("shark", "water", 100.99, 76.5);
+      result1.textContent= "Name="+ myAnimal.name+ "; Terrain= "+ myAnimal.terrain + "; Speed=" +  myAnimal.speed + "; \r\n";
+      result1.textContent= result1.textContent+ "Jaw Strength="+  myAnimal.jaw_strength;
+
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.move();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.eat();
+      result1.textContent= result1.textContent+  "\r\n"+ myAnimal.fight();
+
+  }
+
+function click_poly(e) {
+      let eag = new Eagle("Eagle", "air", 400, 2);
+      let b = new Buffalo("Buffalo", "land", 100, 1);
+      let h = new Human("George Nai", "space, air, land, sea", 50, "BA, MA, MComp, PhD");
+      let s = new Shark("Shark", "water", 100.99, 76.5);
+      let animals=[eag,b,h,s];
+      result1.textContent= "";
+
+      for(let i=0; i< animals.length; i++){
+         let myAnimal= animals[i];
+
+         result1.textContent= result1.textContent+ "Name="+ myAnimal.name+ "; Terrain= "+ myAnimal.terrain + "; Speed=" +  myAnimal.speed + "; \r\n";
+
+         if( myAnimal.wingSpan){
+              result1.textContent= result1.textContent+ "Wing Span="+  myAnimal.wingSpan;
+         }
+
+
+         if( myAnimal.hornSpan){
+              result1.textContent= result1.textContent+ "Horn Span="+  myAnimal.hornSpan;
+         }
+
+
+         if( myAnimal.education){
+              result1.textContent= result1.textContent+ "Education="+  myAnimal.education;
+         }
+
+
+         if( myAnimal.jaw_strength){
+              result1.textContent= result1.textContent+ "Jaw Strength="+  myAnimal.jaw_strength;
+         }
+
+         result1.textContent= result1.textContent+  "\r\n"+ myAnimal.move();
+         result1.textContent= result1.textContent+  "\r\n"+ myAnimal.eat();
+         result1.textContent= result1.textContent+  "\r\n"+ myAnimal.fight();
+         if( myAnimal.dance){
+              result1.textContent= result1.textContent+  "\r\nONLY HUMAN ***** "+ myAnimal.dance();
+         }
+         result1.textContent= result1.textContent+  "\r\n \r\n  \r\n";
+
+      }
+
+
+
+  }
+
+
+ </script>
+   
+
+ </body>
+</html>
