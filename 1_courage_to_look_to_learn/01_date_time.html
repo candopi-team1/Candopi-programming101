@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Very First Program</title>
+    <link rel="stylesheet" href="./01_date_time.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Very First Program</h1>
+
+      <p>Today date is
+         <script>
+             const today= new Date();
+             document.write(today.toDateString() +"<br>"); //clue : date is here.
+         </script>   
+       </p>
+
+   <p>Current time is
+         <script>
+             const ntoday= new Date();
+             document.write(ntoday.toTimeString() +"<br>"); // clue : time is here.
+
+         </script>   
+       </p>
+   
+
+<br><br><br>
+
+      <div>
+          <p>Refresh this page, to see the time change.</p>
+          <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the date and time are calculated.</p>
+          <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+
+ 
+  </p>
+
+
+      </div>
+
+<br><br><br>
+
+    </main>
+
+
+
+
+        <footer> 
+            <script>
+                 document.write(`Copywright \u00A9 CKS --- ${today.getFullYear()}`);// Not '
+            </script>   
+       </footer> 
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Good ions can't surprise you." />
+ <meta name="keywords" content="coding, CS,empowerment" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title> Change Color</title> 
+
+    <style>
+     #result1{
+        margin:0.2em; padding:2em;
+        background-color: #efefef;
+     }
+    </style>
+
+ </head>
+
+ <body>
+
+<br>
+
+<button id="button_red"> Red</button>
+<button id="button_blue"> Blue</button>
+<button id="button_yellow">Yellow</button>
+<!-- Clue: Make your button by copying one of the above. -->
+
+<h3>Change Color</h3>
+<div id="result1"> 
+  <p>Happy Go Lucky</p>
+  <p>Happy Go Lucky</p>
+  <p>Happy Go Lucky</p>
+  <p>Happy Go Lucky</p>
+  <p>Happy Go Lucky</p>
+</div>
+<br>
+
+
+   <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code changes the color.</p>
+<p>Please add another button to change it to another color.</p>
+ <p>Clue: Look for the word "clue" in the codes, and take out the comment, and refresh the page. </p>
+  
+
+
+ <script>
+  let button_red= document.querySelector("#button_red");
+  let button_blue= document.querySelector("#button_blue");
+  let button_yellow = document.querySelector("#button_yellow");
+  // Clue: Make your button by copying one of the above. 
+
+  
+  let result1= document.querySelector("#result1");
+ 
+
+ 
+ button_red.addEventListener("click", red, false);
+ button_blue.addEventListener("click", blue, false);
+ button_yellow.addEventListener("click", yellow, false);
+ // Clue: Make your button by copying one of the above. 
+
+
+  function red(e) {
+      //result1.textContent="You clicked button_red.";
+      result1.style.backgroundColor= "#ff1212";
+  }
+
+  function blue(e) {
+      //result1.textContent="You clicked button_red.";
+      result1.style.backgroundColor= "#1244ff";
+  }
+
+  function yellow(e) {
+      result1.style.backgroundColor= "#d1c91c";
+  }
+
+  // Clue: Make your button by copying one of the above. 
+
+
+
+ </script>
+   
+
+ </body>
+</html>

@@ -1,0 +1,14 @@
+
+
+input[type="radio"] {
+      width: 33px;         /* clue: change this number. */
+      height : 32px;      /* clue: change this number, too. */
+
+}
+
+
+input[type="RESET"] {
+      width: 193px;         /* clue: change this number. */
+      height :42px;        /* clue: change this number, too. */
+
+} 

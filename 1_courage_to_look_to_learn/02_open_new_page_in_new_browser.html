@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>New Page in a New Browser</title>
+  <script type="text/javascript">
+ 
+   function showSpell(mess) {
+    objWindow = window.open("", "", "width=600,height=300");
+    objWindow.document.write("<html><body >");
+    objWindow.document.write("<h1>What do we show?</h1>");
+    objWindow.document.write("<p>");
+    var sess= "Hello Big Tech. Steal at your own risks."; // clue:change message/text here.
+    objWindow.document.write("Homespun Truth: " + mess + "<br/>" + sess);
+
+    objWindow.document.write("</body ></html>");
+    objWindow.document.close();
+  }
+ 
+  //-->
+  </script>
+</head>
+
+<body>
+<br>
+    <input type="button" name="Show2" value="Show  The Magic Spell" 
+           onClick="showSpell('abaradca cafa')">  <br><br> <!--  clue:change message/text here. -->
+<hr>
+
+      <div> 
+          <p>Please change what the spell says?</p> 
+          <p>Open the html file in Notepad, and use Ctrl+F key combination to find the original spell text. Change it a bit.</p>
+
+  <p>Clue: Look for the word "clue" in the codes, and take out or read the comment, and refresh the page. </p>
+      </div>
+
+
+</body>
+</html>

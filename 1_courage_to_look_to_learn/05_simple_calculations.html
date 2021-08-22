@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title> Simple Calculations</title> 
+
+    <style>
+     #result1{
+        margin:0.2em; padding:2em;
+        background-color: #bbcada;
+     }
+    </style>
+
+ </head>
+
+ <body>
+
+
+<h1>Money Calculations</h1>
+<form name="myform"> 
+<pre>
+  Present Value:        <input type="text" name="presentVal">
+  Interest Rate(%):     <input type="text" name="intRate">
+  Years of Compounding: <input type="text" name="years"><br>
+</pre>
+  <input type="button" name="calc" value="Calculate"onclick="calculate(myform)">
+ <br><br>
+<pre>
+  Total Interest: <input type="text" name="totalInt"><br>
+  Future Value:   <input type="text" name="futureVal">
+</pre>
+</form>
+
+<br>
+
+
+<h1>Calculate Miles per Gallon</h1>
+<form name="myform2">
+<pre>
+    Enter miles driven:         <input type="text" name="miles"><br>
+    Enter gallon of gas used:   <input type="text" name="gallons"><br>
+</pre>
+    <input type="button" name="calc" value="Calculate"onclick="calculate2(myform2)">
+</form>
+
+<br>
+<h3>Result: Miles per Gallon</h3>
+<div id="result1"> </div>
+
+
+
+ <script>
+ 
+ 
+
+function calculate(formObj){
+  var presentVal = parseFloat(formObj.presentVal.value);
+  var intRate    = parseFloat(formObj.intRate.value)/100.;
+  var years     = parseFloat(formObj.years.value);
+
+  var futureVal = presentVal * Math.pow((1.0+intRate), years); // clue 
+  var totalInt = futureVal - presentVal;
+  futureVal = Math.round(futureVal*100.0)/100.0;
+  totalInt  = Math.round(totalInt*100.0)/100.0;
+
+  formObj.futureVal.value = futureVal;
+  formObj.totalInt.value = totalInt;
+  return;
+}
+
+function calculate2(formObj){
+      let miles = parseInt(formObj.miles.value );
+      let gallons = parseInt(formObj.gallons.value );
+
+      let mpg = miles/gallons;
+      mpg= parseFloat(mpg);
+      // ok alert(mpg);
+     result1.textContent="Miles per Gallon = " + mpg;
+
+     // result1.textContent= result1.textContent + "; Reward= " + mpg; //clue
+
+  return;
+}
+
+ </script>
+   
+<div>
+          <h3>Instructions</h3>
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code calculate the numbers.</p>
+  <p>Can you change the formulas? Can you add reward for the gallons used?</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+ 
+  </p>
+
+
+</div>
+ </body>
+</html>
