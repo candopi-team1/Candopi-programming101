@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=0">
+	<title>Counter Clockwise Rotation</title>
+	<style>
+		body {
+			overflow : hidden;
+		}
+		#anim {
+			position : absolute;
+			width : 100px;
+			height : 100px;
+			background-color : orange;
+		}
+	</style>
+</head>
+<body>
+<h1>Counter Clockwise</h1>
+	<div id="anim"></div>
+<br>
+  <div>
+          <h3>Instructions</h3>
+   
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code moves the block.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre> 
+  </p>
+
+   <p>Please moves the block faster or slower, or in a differnt direction.</p>
+
+      </div>
+
+
+	
+	<script>
+		
+		function animate() {
+			var element = document.getElementById("anim"),
+				time = +new Date;
+
+			element.style.right = (50 + Math.cos(time / 500) * 25) + "%";
+			element.style.top = (50 + Math.sin(time / 500) * 25) + "%";
+
+			setTimeout(animate, 32000 / 60); // CLUE:  Faster or slower : 1000 / 60
+		}
+
+		animate();
+		
+	</script>
+	
+</body>
+</html>

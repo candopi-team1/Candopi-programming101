@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Planet System 2</title>
+    <script type="text/javascript">
+
+var sun = new Image();
+var moon = new Image();
+var earth = new Image();
+var man = new Image();
+
+var manx=-105,
+    many=-105;
+
+function init(){
+  sun.src = './sun.png';
+  moon.src = './moon.png';
+  earth.src = './earth.png';
+  man.src = './man.png';
+
+  window.requestAnimationFrame(draw);
+}
+
+function draw() {
+  // ok console.log('Redraw once more.'); //kkn: so fast, so often
+
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  ctx.globalCompositeOperation = 'destination-over';
+  ctx.clearRect(0,0,300,300); // clear canvas
+
+  ctx.fillStyle = 'rgba(0,0,0,0.4)';
+  ctx.strokeStyle = 'rgba(0,153,255,0.4)';
+  ctx.save();
+  ctx.translate(150,150);
+
+  // Earth
+  var time = new Date();
+  ctx.rotate( ((2*Math.PI)/10)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds() ); //CLUE:SPEED: ((2*Math.PI)/60)*time.getSeconds()
+  ctx.translate(105,0); 
+
+  // orig ctx.fillRect(0,-12,50,24); // Shadow
+  ctx.fillRect(0,-6, 12, 25); // Shadow
+
+  ctx.drawImage(earth,-12,-12);
+
+
+  // Moon
+  ctx.save();
+  ctx.rotate( ((2*Math.PI)/6)*time.getSeconds() + ((2*Math.PI)/600)*time.getMilliseconds() ); //CLUE: SPEED :((2*Math.PI)/6000)*time.getMilliseconds() 
+  ctx.translate(0,28.5);
+  ctx.drawImage(moon,-3.5,-3.5);
+  ctx.restore();
+
+
+  // WEIRD   ctx.save();
+  manx= manx - 0.1;
+  many= many - 0.1;
+  if  (manx % 5 == 0){    manx=-165;  }
+  if  (many % 3 == 0){    many=-115;  }
+
+  if (manx < -160){    manx=-35;  }
+  if (many < -160){    many=-15;  }
+
+  
+
+  ctx.drawImage(man, manx, many);
+  // console.log(man.x) // console.log(man.y) // --> both 0
+  // WEIRD   ctx.save();
+
+
+  ctx.restore();
+  
+  ctx.beginPath();
+  ctx.arc(150,150,105,0,Math.PI*2,false); // Earth orbit
+  ctx.stroke();
+ 
+  ctx.drawImage(sun,0,0,300,300);
+
+  window.requestAnimationFrame(draw);
+}
+
+init();
+
+      
+    </script>
+    
+     <style type="text/css">
+        canvas { border: 1px solid black; }
+    </style>
+
+  </head>
+
+
+  <body onload="init();">
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+<br>
+   <div>
+          <h3>Instructions</h3>
+  
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code animates 3 different things simultaneously.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+   </pre> 
+  </p>
+
+   <p>Please edit the code to change the speed of rotation/falling.</p>
+      </div>
+
+
+
+  </body>
+</html>

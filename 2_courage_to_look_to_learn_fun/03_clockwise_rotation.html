@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=0">
+	<title>Clockwise Rotation, Faster</title>
+	<style>
+		body {
+			overflow : hidden;
+		}
+		#anim {
+			position : absolute;
+			width : 100px;
+			height : 100px;
+			background-color : orange;
+		}
+	</style>
+	<script>
+		window.requestAnimationFrame = (function() {
+		return window.requestAnimationFrame
+			|| window.webkitRequestAnimationFrame
+			|| window.mozRequestAnimationFrame
+			|| window.oRequestAnimationFrame
+			|| window.msRequestAnimationFrame
+			|| function(callback, element) {
+				return window.setTimeout(
+					function() {
+						callback(+new Date);
+					}, 81000 / 60  // CLUE: FASTER or SLOWER :  1000 / 60 
+				);
+			};
+		})();
+	</script>
+</head>
+<body>
+<h1>Clockwise Faster</h1>
+	<div id="anim"></div>
+
+  <div>
+          <h3>Instructions</h3>
+   
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code moves the block.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre> 
+  </p>
+
+   <p>Please moves the block faster or slower, or in a differnt direction.</p>
+
+      </div>
+	
+	<script>
+		
+		function animate(time) {
+			var element = document.getElementById("anim");
+
+			element.style.left = (50 + Math.cos(time / 500) * 25) + "%"; //CLUE: DIRECTION: element.style.right = (50 + Math.cos(time / 500) * 25) + "%";
+			element.style.top = (50 + Math.sin(time / 500) * 25) + "%";
+
+			requestAnimationFrame(animate);
+		}
+
+		requestAnimationFrame(animate);
+		
+	</script>
+	
+</body>
+</html>
