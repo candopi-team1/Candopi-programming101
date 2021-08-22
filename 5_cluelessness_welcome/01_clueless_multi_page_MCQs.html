@@ -1,0 +1,126 @@
+<html>
+
+<head>
+<title>01 Clueless Multi-page MCQs</title>
+<script language="JavaScript"><!--
+function Choice(question, correct) {
+  this.question = question;
+  this.correct = correct - 1;
+  this.answers = new Array();
+  for (var i=2; i<Choice.arguments.length; i++) {
+    this.answers[i-2] = Choice.arguments[i];
+  }
+  this.answer = -1;
+}
+
+var item = 0;
+
+var myChoice = new Array();
+
+var q = 0;
+
+function update(what,output) {
+  if (document.all) {
+    document.all[what].innerHTML = output;
+  }
+  else if (document.layers) {
+    document.layers[what].document.open();
+    document.layers[what].document.write(output);
+    document.layers[what].document.close();
+  }
+  else if (document.getElementById) {
+    document.getElementById(what).innerHTML = output;
+  }
+}
+
+function show() {
+  if (q < myChoice.length) {
+    var output = '';
+    output += '<form>';
+
+    output += '<b>' + myChoice[q].question + '<\/b><br>';
+    for (var i=0; i<myChoice[q].answers.length; i++) {
+      output +=
+        '<input type="radio" name="answer"' +
+        'onClick="myChoice[' + q + '].answer=' + i + '">' +
+        myChoice[q].answers[i] + '<br>';
+    }
+    output +=
+      '<br><input type="button" value="Next" ' +
+      'onClick="if (myChoice[' + q + '].answer!=-1) show()">';
+
+    output += '<\/form>';
+
+    update('myDiv',output);
+
+    q++;
+  }
+  else {
+    var score = 0;
+    var output = '';
+    for (var i=0; i<myChoice.length; i++) {
+      output += '<p>Q: ' + myChoice[i].question
+      if (myChoice[i].answer == myChoice[i].correct) {
+        score++;
+        output += '<br>You correctly answered: ' +
+                  myChoice[i].answers[myChoice[i].answer];
+      }
+      else {
+      output += '<br>You incorrectly answered: ' +
+                myChoice[i].answers[myChoice[i].answer] +
+                '<br>The correct answer was: ' +
+                myChoice[i].answers[myChoice[i].correct];
+      }
+    }
+
+    var output = '<h1>You scored ' +
+                 score +
+                 ' out of ' +
+                 myChoice.length +
+                 '<\/h1>' +
+                 output;
+    update('myDiv',output);
+  }
+}
+//--></script>
+
+<script language="JavaScript" src="multi_page_MCQs.js"></script> <!-- CLUE :Change this file: multi_page_MCQs.js -->
+
+</head>
+
+<body onLoad="show()">
+<br>
+   <div id="myDiv" style="left:100; top:30;"></div> 
+   <br><br>
+
+ <div>
+          <h3>Instructions</h3>
+
+  <p>Open the html file in Notepad, and use Ctrl+F key combination to see how the code creates the top-bar menu.</p>
+  <p>Clue: Look for the word "clue" in the codes, and take out the comment, and refresh the page. 
+   <pre>
+      // single-line comment in javascript
+     /* 
+        multi-line comment in javascript
+        multi-line comment in javascript
+      */
+
+   </pre>
+ 
+  </p>
+
+     <p>We added the last question item. Can you add another question item? Or can you remove our question item?</p>
+     <p><strong>Cluelessness is essential to survive in the software development world.</strong></p>
+     <p>Don't try to understand everything in a code base. Probably for 2 reasons:
+      <ol>
+        <li>You have better things  to do.</li>
+        <li>You can find better alternatives. Often you do deserve better codes and components. Treat yourself well, with due respect.</li>
+      </ol>
+    </p>
+
+
+ </div>
+
+</body>
+
+</html>
