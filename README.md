@@ -1,12 +1,14 @@
 
-Benefits:
+BENEFITS:
 
 You can become a software billionaire, a great data scientist or anything in between.
 
 You become ready to explore more, master more.
 
-(1) As you can see in my own examples (Java, C++, Python, Ruby in the folders : ), JavaScript you learn here is very close to any other language: 
+(1) As you can see in my own examples (Java, C++, Python, Ruby in the folders : /7_data_structures_and_algorithms/sorts_python
+and /7_data_structures_and_algorithms/quick_sort_python), JavaScript you learn here is very close to any other language: 
 Java, C++, Python, PHP, Ruby or any other.
+
 
 (2) Moving to Web development, Mobile development,  app development, blockchain development etc, too is smooth and easy. 
 
@@ -14,16 +16,18 @@ Java, C++, Python, PHP, Ruby or any other.
  e.g. Neural networks, Convolutional networks (CNN), RNN, Capsule networks, One-Shot, Few-Shots etc are also made up of "while" and "for" loops you learn here.
 
 
-Costs:
+COSTS:
 
 (1) The course is very easy, even for primary school students.
+
 (2) You don't need any experience.
+
 (3) You do zero installation.
+
 (4) The course takes just 20 to 40 hours. And zero fees.
 
 
-
-If you get into trouble:
+IF YOU GET INTO TROUBLE:
 
 (1) Say this mantra 3 times:
 "I'm alright. This person cannot teach. I will find a better teacher, a better book." 
