@@ -1,0 +1,51 @@
+leftA=  [68]
+rightA= [1]
+results=  [1, 68]
+
+
+leftA=  [123]
+rightA= [2]
+results=  [2, 123]
+
+
+leftA=  [65]
+rightA= [2, 123]
+results=  [2, 65, 123]
+
+
+leftA=  [1, 68]
+rightA= [2, 65, 123]
+results=  [1, 2, 65, 68, 123]
+
+
+leftA=  [2]
+rightA= [11]
+results=  [2, 11]
+
+
+leftA=  [4]
+rightA= [2, 11]
+results=  [2, 4, 11]
+
+
+leftA=  [34]
+rightA= [3]
+results=  [3, 34]
+
+
+leftA=  [11]
+rightA= [3, 34]
+results=  [3, 11, 34]
+
+
+leftA=  [2, 4, 11]
+rightA= [3, 11, 34]
+results=  [2, 3, 4, 11, 11, 34]
+
+
+leftA=  [1, 2, 65, 68, 123]
+rightA= [2, 3, 4, 11, 11, 34]
+results=  [1, 2, 2, 3, 4, 11, 11, 34, 65, 68, 123]
+
+
+[1, 2, 2, 3, 4, 11, 11, 34, 65, 68, 123]

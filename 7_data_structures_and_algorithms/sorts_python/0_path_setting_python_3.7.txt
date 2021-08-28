@@ -1,0 +1,23 @@
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\code_class_javascript\2000USD_6months_0USD_10days\7_data_structures_and_algorithms\sorts_python
+
+(1)
+python bubble_sort.py
+python selection_sort.py
+python  insertion_sort.py
+
+(2)
+python  merge_sort.py
+python  merge_sort.py -->  merging.txt
+python merge_hmk.py
+python merge_sort2_hmk.py
+
+
+(3)
+python selection_sort_dummies.py
+python insertion_sort_dummies.py
+
+python  merge_sort_dummies.py
+
+
