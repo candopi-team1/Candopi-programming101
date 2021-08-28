@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>  Merge Sort   </title> 
+</head>
+
+ <body>
+<h2>Merge Sort</h2>
+
+<form name="form1">
+  Value1:        <input type="text" name="val1"><br>
+  Value2:        <input type="text" name="val2"><br>
+  Value3:        <input type="text" name="val3"><br>
+  Value4:        <input type="text" name="val4"><br>
+  Value5:        <input type="text" name="val5"><br><br>
+
+  <input type="button" name="calc" value="Merge Sort" onclick="sort(form1)">
+  <br><br>
+
+   Sorted Numbers:<input type="text" min-width="100%" name="sortedNumbers">
+</form>
+
+
+<h2>Analyzing Results</h2>
+<div id="solution1"></div>
+      
+<script type="text/javascript">
+function sort(formObj){
+  var val1 = parseFloat(formObj.val1.value);
+  var val2 = parseFloat(formObj.val2.value);  
+  var val3 = parseFloat(formObj.val3.value);
+  var val4 = parseFloat(formObj.val4.value);
+  var val5 = parseFloat(formObj.val5.value);
+
+  var array1=[val1, val2,val3,val4, val5];
+  // ok : Do try this// var array1=[68,1,65, 123, 2, 4, 2, 11, 11,34, 3] ;
+ 
+  document.getElementById("solution1").innerHTML ='';
+  
+
+  var array_ret= mergeSort(array1);
+  // OK alert(array_ret);
+  formObj.sortedNumbers.value = array_ret;
+  
+  return;
+}
+
+
+
+function merge(leftA, rightA){
+    var results= [], leftIndex= 0, rightIndex= 0;
+
+    while (leftIndex < leftA.length && rightIndex < rightA.length) {
+        if( leftA[leftIndex]<rightA[rightIndex] ){
+            results.push(leftA[leftIndex++]);
+        } else {
+            results.push(rightA[rightIndex++]);
+        }
+    }
+    var leftRemains = leftA.slice(leftIndex),
+        rightRemains = rightA.slice(rightIndex);
+
+    // add remaining to resultant array
+    results = results.concat(leftRemains).concat(rightRemains);
+    
+
+    document.getElementById("solution1").innerHTML +=  '<p>[' + leftA + ']+ [' + rightA + "] ---> ["+ results +'] </p>';
+
+    return results;
+
+}
+
+function mergeSort(array) {
+    if(array.length<2){
+        return array; // Base case: array is now sorted since it's just 1 element
+    }
+
+    var midpoint = Math.floor((array.length)/2),
+        leftArray = array.slice(0, midpoint),
+        rightArray = array.slice(midpoint);
+ 
+    document.getElementById("solution1").innerHTML +=  '<p>'+ array + ' ===============> ['+ leftArray +'] +[' +rightArray +']</p>';
+    return merge(mergeSort(leftArray), mergeSort(rightArray));
+}
+
+
+// mergeSort([68,1,65, 123, 2, 4, 2, 11, 11,34, 3] );
+
+
+
+
+
+</script>
+
+
+ </body>
+</html>

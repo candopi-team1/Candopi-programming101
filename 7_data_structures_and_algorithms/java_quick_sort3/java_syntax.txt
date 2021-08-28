@@ -1,0 +1,8 @@
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\code_class_javascript\2000USD_6months_0USD_10days\7_data_structures_and_algorithms\java_quick_sort3
+
+javac  -d  .   Syntax1.java 
+pause
+
+
+java   blah.BlahApp 
+pause
