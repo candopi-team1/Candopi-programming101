@@ -24,5 +24,5 @@ Then, you run it in your mind, especially the conditions, corner cases, edge cas
 
 REMEMBER the whole field is small. Technology moves super-slowly, as Steve Jobs kept saying.
 So if you cannot learn an algorithm today, it means nothing.
-Learning it today or learning it 3 months later  or 3 years later, makes ZERO different.
+Learning it today or learning it 3 months later  or 3 years later, makes ZERO difference.
 These algorithms are invented or discovered 1 in every decade. You have time. 
