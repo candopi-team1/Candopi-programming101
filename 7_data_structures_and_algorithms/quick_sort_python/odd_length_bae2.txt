@@ -1,0 +1,154 @@
+ Partition gets    ... List= [0, 1, 2] , pv= 1 , Li= 0 Ri= 2 , 0 --> 2
+      swap 1  and  1
+ Partition returns ... List= [0, 1, 2] , pv= 1 , Li= 2 Ri= 0
+
+HELPER  [0, 1, 2] index= 2 Li= 0 Ri= 2
+ Partition gets    ... List= [0, 1, 2] , pv= 0 , Li= 0 Ri= 1 , 0 --> 1
+      swap 0  and  0
+ Partition returns ... List= [0, 1, 2] , pv= 0 , Li= 1 Ri= -1
+
+HELPER  [0, 1, 2] index= 1 Li= 0 Ri= 1
+When index= 1 , LHS is sorted. [0, 1, 2]
+When index= 1 , RHS is sorted. [0, 1, 2]
+When index= 2 , RHS is sorted. [0, 1, 2]
+[0, 1, 2] 3
+
+*********
+
+ Partition gets    ... List= [10, 9, 2] , pv= 9 , Li= 0 Ri= 2 , 10 --> 2
+      swap 2  and  10
+      swap 9  and  9
+ Partition returns ... List= [2, 9, 10] , pv= 9 , Li= 2 Ri= 0
+
+HELPER  [2, 9, 10] index= 2 Li= 0 Ri= 2
+ Partition gets    ... List= [2, 9, 10] , pv= 2 , Li= 0 Ri= 1 , 2 --> 9
+      swap 2  and  2
+ Partition returns ... List= [2, 9, 10] , pv= 2 , Li= 1 Ri= -1
+
+HELPER  [2, 9, 10] index= 1 Li= 0 Ri= 1
+When index= 1 , LHS is sorted. [2, 9, 10]
+When index= 1 , RHS is sorted. [2, 9, 10]
+When index= 2 , RHS is sorted. [2, 9, 10]
+[2, 9, 10] 3
+
+*********
+
+ Partition gets    ... List= [0, 1, 27, 33, 91] , pv= 27 , Li= 0 Ri= 4 , 0 --> 91
+      swap 27  and  27
+ Partition returns ... List= [0, 1, 27, 33, 91] , pv= 27 , Li= 3 Ri= 1
+
+HELPER  [0, 1, 27, 33, 91] index= 3 Li= 0 Ri= 4
+ Partition gets    ... List= [0, 1, 27, 33, 91] , pv= 1 , Li= 0 Ri= 2 , 0 --> 27
+      swap 1  and  1
+ Partition returns ... List= [0, 1, 27, 33, 91] , pv= 1 , Li= 2 Ri= 0
+
+HELPER  [0, 1, 27, 33, 91] index= 2 Li= 0 Ri= 2
+ Partition gets    ... List= [0, 1, 27, 33, 91] , pv= 0 , Li= 0 Ri= 1 , 0 --> 1
+      swap 0  and  0
+ Partition returns ... List= [0, 1, 27, 33, 91] , pv= 0 , Li= 1 Ri= -1
+
+HELPER  [0, 1, 27, 33, 91] index= 1 Li= 0 Ri= 1
+When index= 1 , LHS is sorted. [0, 1, 27, 33, 91]
+When index= 1 , RHS is sorted. [0, 1, 27, 33, 91]
+When index= 2 , RHS is sorted. [0, 1, 27, 33, 91]
+ Partition gets    ... List= [0, 1, 27, 33, 91] , pv= 33 , Li= 3 Ri= 4 , 33 --> 91
+      swap 33  and  33
+ Partition returns ... List= [0, 1, 27, 33, 91] , pv= 33 , Li= 4 Ri= 2
+
+HELPER  [0, 1, 27, 33, 91] index= 4 Li= 3 Ri= 4
+When index= 4 , LHS is sorted. [0, 1, 27, 33, 91]
+When index= 4 , RHS is sorted. [0, 1, 27, 33, 91]
+[0, 1, 27, 33, 91] 5
+
+*********
+
+ Partition gets    ... List= [15, 13, 10, 9, 2] , pv= 10 , Li= 0 Ri= 4 , 15 --> 2
+      swap 2  and  15
+      swap 9  and  13
+      swap 10  and  10
+ Partition returns ... List= [2, 9, 10, 13, 15] , pv= 10 , Li= 3 Ri= 1
+
+HELPER  [2, 9, 10, 13, 15] index= 3 Li= 0 Ri= 4
+ Partition gets    ... List= [2, 9, 10, 13, 15] , pv= 9 , Li= 0 Ri= 2 , 2 --> 10
+      swap 9  and  9
+ Partition returns ... List= [2, 9, 10, 13, 15] , pv= 9 , Li= 2 Ri= 0
+
+HELPER  [2, 9, 10, 13, 15] index= 2 Li= 0 Ri= 2
+ Partition gets    ... List= [2, 9, 10, 13, 15] , pv= 2 , Li= 0 Ri= 1 , 2 --> 9
+      swap 2  and  2
+ Partition returns ... List= [2, 9, 10, 13, 15] , pv= 2 , Li= 1 Ri= -1
+
+HELPER  [2, 9, 10, 13, 15] index= 1 Li= 0 Ri= 1
+When index= 1 , LHS is sorted. [2, 9, 10, 13, 15]
+When index= 1 , RHS is sorted. [2, 9, 10, 13, 15]
+When index= 2 , RHS is sorted. [2, 9, 10, 13, 15]
+ Partition gets    ... List= [2, 9, 10, 13, 15] , pv= 13 , Li= 3 Ri= 4 , 13 --> 15
+      swap 13  and  13
+ Partition returns ... List= [2, 9, 10, 13, 15] , pv= 13 , Li= 4 Ri= 2
+
+HELPER  [2, 9, 10, 13, 15] index= 4 Li= 3 Ri= 4
+When index= 4 , LHS is sorted. [2, 9, 10, 13, 15]
+When index= 4 , RHS is sorted. [2, 9, 10, 13, 15]
+[2, 9, 10, 13, 15] 5
+
+*********
+
+ Partition gets    ... List= [10, 1, -27, 91, 15] , pv= -27 , Li= 0 Ri= 4 , 10 --> 15
+      swap -27  and  10
+ Partition returns ... List= [-27, 1, 10, 91, 15] , pv= -27 , Li= 1 Ri= 0
+
+HELPER  [-27, 1, 10, 91, 15] index= 1 Li= 0 Ri= 4
+When index= 1 , LHS is sorted. [-27, 1, 10, 91, 15]
+ Partition gets    ... List= [-27, 1, 10, 91, 15] , pv= 10 , Li= 1 Ri= 4 , 1 --> 15
+      swap 10  and  10
+ Partition returns ... List= [-27, 1, 10, 91, 15] , pv= 10 , Li= 3 Ri= 1
+
+HELPER  [-27, 1, 10, 91, 15] index= 3 Li= 1 Ri= 4
+ Partition gets    ... List= [-27, 1, 10, 91, 15] , pv= 1 , Li= 1 Ri= 2 , 1 --> 10
+      swap 1  and  1
+ Partition returns ... List= [-27, 1, 10, 91, 15] , pv= 1 , Li= 2 Ri= 0
+
+HELPER  [-27, 1, 10, 91, 15] index= 2 Li= 1 Ri= 2
+When index= 2 , LHS is sorted. [-27, 1, 10, 91, 15]
+When index= 2 , RHS is sorted. [-27, 1, 10, 91, 15]
+ Partition gets    ... List= [-27, 1, 10, 91, 15] , pv= 91 , Li= 3 Ri= 4 , 91 --> 15
+      swap 15  and  91
+ Partition returns ... List= [-27, 1, 10, 15, 91] , pv= 91 , Li= 4 Ri= 3
+
+HELPER  [-27, 1, 10, 15, 91] index= 4 Li= 3 Ri= 4
+When index= 4 , LHS is sorted. [-27, 1, 10, 15, 91]
+When index= 4 , RHS is sorted. [-27, 1, 10, 15, 91]
+[-27, 1, 10, 15, 91] 5
+
+*********
+
+ Partition gets    ... List= [1.5, 13, 10, 9, -2] , pv= 10 , Li= 0 Ri= 4 , 1.5 --> -2
+      swap -2  and  13
+      swap 9  and  10
+ Partition returns ... List= [1.5, -2, 9, 10, 13] , pv= 10 , Li= 3 Ri= 2
+
+HELPER  [1.5, -2, 9, 10, 13] index= 3 Li= 0 Ri= 4
+ Partition gets    ... List= [1.5, -2, 9, 10, 13] , pv= -2 , Li= 0 Ri= 2 , 1.5 --> 9
+      swap -2  and  1.5
+ Partition returns ... List= [-2, 1.5, 9, 10, 13] , pv= -2 , Li= 1 Ri= 0
+
+HELPER  [-2, 1.5, 9, 10, 13] index= 1 Li= 0 Ri= 2
+When index= 1 , LHS is sorted. [-2, 1.5, 9, 10, 13]
+ Partition gets    ... List= [-2, 1.5, 9, 10, 13] , pv= 1.5 , Li= 1 Ri= 2 , 1.5 --> 9
+      swap 1.5  and  1.5
+ Partition returns ... List= [-2, 1.5, 9, 10, 13] , pv= 1.5 , Li= 2 Ri= 0
+
+HELPER  [-2, 1.5, 9, 10, 13] index= 2 Li= 1 Ri= 2
+When index= 2 , LHS is sorted. [-2, 1.5, 9, 10, 13]
+When index= 2 , RHS is sorted. [-2, 1.5, 9, 10, 13]
+ Partition gets    ... List= [-2, 1.5, 9, 10, 13] , pv= 10 , Li= 3 Ri= 4 , 10 --> 13
+      swap 10  and  10
+ Partition returns ... List= [-2, 1.5, 9, 10, 13] , pv= 10 , Li= 4 Ri= 2
+
+HELPER  [-2, 1.5, 9, 10, 13] index= 4 Li= 3 Ri= 4
+When index= 4 , LHS is sorted. [-2, 1.5, 9, 10, 13]
+When index= 4 , RHS is sorted. [-2, 1.5, 9, 10, 13]
+[-2, 1.5, 9, 10, 13] 5
+
+*********
+

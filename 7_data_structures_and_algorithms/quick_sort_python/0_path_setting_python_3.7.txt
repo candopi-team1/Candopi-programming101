@@ -1,0 +1,84 @@
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\code_class_javascript\2000USD_6months_0USD_10days\7_data_structures_and_algorithms\quick_sort_python
+
+
+SET PATH=C:\Users\donate_box500\opt\my_pythons\py383;C:\Users\donate_box500\opt\my_pythons\py383\Scripts;%PATH%
+PUSHD D:\code_class_javascript\2000USD_6months_0USD_10days\7_data_structures_and_algorithms\quick_sort_python
+
+// GOOD ONES
+(1)
+python  01_quick_sort_bae.py          --> blazing fast     + OK with already-sorted list + Overcome commonsense-bug!
+python  01_quick_sort_bae2.py   > quick_sort_bae2_Result.txt      --> blazing fast     + OK with already-sorted list + Overcome commonsense-bug!
+python  quick_sort_partition_test.py > partition_test1.txt
+
+
+(2) BEST
+python  quick_sort3_lafore.py    -->  BLAZING fast  + OK with already-sorted list  + Overcome commonsense-bug! 
+python  quick_sort2b_lafore.py    --> VERY similar to 3, with Insertion sort as well
+
+python  quick_sort2_lafore.py     
+
+quick_sort1d_lafore.py    = without median of 3
+
+
+(3)
+python  quick_sort_cplusplus.py    --> blazing fast  + OK with already-sorted list + Overcome commonsense-bug!
+
+
+(4)
+python quick_sort_dummies.py  -------> BLAZING fast  + OK with already-sorted list  + Overcome commonsense-bug!     
+
+
+(5) python  quick_sort_commonsense.py    
+
+
+
+(6) LOOKS incredibly simple,easy !!
+
+python 02_quick_sort_real_python.py  > real_python_Results.txt
+
+python 02_quick_sort_codez_up.py     > codez_up_Results.txt
+
+codez_up takes 0.0 tiem if an already sorted list.
+
+
+
+// WEAK ONES
+(1) python  quick_sort_geeks.py       --> blazing fast   + Failed with an already-sorted list
+==> RecursionError: maximum recursion depth exceeded in comparison
+
+(2)
+python quick_sort_SadrachPierre_Ph.D.py
+----> Failed with an already-sorted list. Trick OK by adding 2 unsorted elements ;-)
+
+(3) iterative solution
+python quick_sort_DiegoSalinas.py
+
+python quick_sort_DiegoSalinas.py > DiegoSalinas_already_sorted_Results.py BAD
+
+python quick_sort_DiegoSalinas.py > DiegoSalinas_unsorted_Results.txt  BAD
+
+
+
+
+
+
+// CONCLUSION:  
+(1)
+dummies    pivot  = data[left]
+cplusplus  pivot = arr[start] 
+
+(2)
+sammie_bae pivot_index=int(  (right + left) / 2)
+
+
+(3) LOOKS incredibly simple,easy !!
+
+python quick_sort_real_python.py  > real_python_Results.txt
+python quick_sort_codez_up.py     > codez_up_Results.txt
+
+
+(4)
+Lafore     pivot= medianOf3 == theArray[right-1]
+But his partition seems better.
+

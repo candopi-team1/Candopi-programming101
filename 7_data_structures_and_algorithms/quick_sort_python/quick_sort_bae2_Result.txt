@@ -1,0 +1,44 @@
+ Partition gets    ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 4 , Li= 0 Ri= 7 , 1 --> 8
+      swap 4  and  4
+ Partition returns ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 4 , Li= 4 Ri= 2
+
+HELPER  [1, 2, 3, 4, 7, 6, 9, 8] index= 4 Li= 0 Ri= 7
+ Partition gets    ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 2 , Li= 0 Ri= 3 , 1 --> 4
+      swap 2  and  2
+ Partition returns ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 2 , Li= 2 Ri= 0
+
+HELPER  [1, 2, 3, 4, 7, 6, 9, 8] index= 2 Li= 0 Ri= 3
+ Partition gets    ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 1 , Li= 0 Ri= 1 , 1 --> 2
+      swap 1  and  1
+ Partition returns ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 1 , Li= 1 Ri= -1
+
+HELPER  [1, 2, 3, 4, 7, 6, 9, 8] index= 1 Li= 0 Ri= 1
+When index= 1 , LHS is sorted. [1, 2, 3, 4, 7, 6, 9, 8]
+When index= 1 , RHS is sorted. [1, 2, 3, 4, 7, 6, 9, 8]
+ Partition gets    ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 3 , Li= 2 Ri= 3 , 3 --> 4
+      swap 3  and  3
+ Partition returns ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 3 , Li= 3 Ri= 1
+
+HELPER  [1, 2, 3, 4, 7, 6, 9, 8] index= 3 Li= 2 Ri= 3
+When index= 3 , LHS is sorted. [1, 2, 3, 4, 7, 6, 9, 8]
+When index= 3 , RHS is sorted. [1, 2, 3, 4, 7, 6, 9, 8]
+ Partition gets    ... List= [1, 2, 3, 4, 7, 6, 9, 8] , pv= 6 , Li= 4 Ri= 7 , 7 --> 8
+      swap 6  and  7
+ Partition returns ... List= [1, 2, 3, 4, 6, 7, 9, 8] , pv= 6 , Li= 5 Ri= 4
+
+HELPER  [1, 2, 3, 4, 6, 7, 9, 8] index= 5 Li= 4 Ri= 7
+When index= 5 , LHS is sorted. [1, 2, 3, 4, 6, 7, 9, 8]
+ Partition gets    ... List= [1, 2, 3, 4, 6, 7, 9, 8] , pv= 9 , Li= 5 Ri= 7 , 7 --> 8
+      swap 8  and  9
+ Partition returns ... List= [1, 2, 3, 4, 6, 7, 8, 9] , pv= 9 , Li= 7 Ri= 6
+
+HELPER  [1, 2, 3, 4, 6, 7, 8, 9] index= 7 Li= 5 Ri= 7
+ Partition gets    ... List= [1, 2, 3, 4, 6, 7, 8, 9] , pv= 7 , Li= 5 Ri= 6 , 7 --> 8
+      swap 7  and  7
+ Partition returns ... List= [1, 2, 3, 4, 6, 7, 8, 9] , pv= 7 , Li= 6 Ri= 4
+
+HELPER  [1, 2, 3, 4, 6, 7, 8, 9] index= 6 Li= 5 Ri= 6
+When index= 6 , LHS is sorted. [1, 2, 3, 4, 6, 7, 8, 9]
+When index= 6 , RHS is sorted. [1, 2, 3, 4, 6, 7, 8, 9]
+When index= 7 , RHS is sorted. [1, 2, 3, 4, 6, 7, 8, 9]
+[1, 2, 3, 4, 6, 7, 8, 9] 8
