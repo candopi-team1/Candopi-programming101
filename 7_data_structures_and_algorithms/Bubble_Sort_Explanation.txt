@@ -1,7 +1,24 @@
-No scientist thinks in equations: Einstein.
-I work on the paper : Feynman.
-Pencil-paper simulation is the most painless method: Donald Knuth
+(1) 
+Start with the first element.
+Compare it to the element on its right(i.e. the 2nd).
+If the first is bigger than the 2nd, swap them.
+If not, leave them alone.
 
+(2) Then you get to 2nd element.
+Compare it to the 3rd.
+If the 3nd is bigger than the 3rd, swap them.
+If not, leave them alone.
 
-After paralysis, Stephen Hawking worked even better without pencil and paper.: An American contemporary physicist with Hawking
-With certain types of problems, once a student picks up paper to solve, he loses the ability to solve : Dijkstra.
+(3) You go on till the end.
+
+(4) Now the first element has been placed correctly.
+This is the first round of the outer loop.
+You begin the outer loop again.
+
+(5) Go on.
+
+How many times does the outer loop run? (Length_of_arry -1) times
+How many times does the inner loop run? (Length_of_arry -1) times
+
+Please study the images for bubble sort.
+ 

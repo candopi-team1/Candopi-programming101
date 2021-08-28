@@ -1,7 +1,16 @@
-No scientist thinks in equations: Einstein.
-I work on the paper : Feynman.
-Pencil-paper simulation is the most painless method: Donald Knuth
+(1) Find the smallest element, place it in the current position.
+At the beginning, the current position is 0.
+So the smallest element becomes the first element.
+You array now looks like = [smallest, .....]
+
+(2) So, in the next round of the outer loop, you begin with the 2nd position.
+The inner loop finds the next smallest and places it in 2nd position.
+You array now looks like = [smallest, 2nd-smallest, .....]
 
 
-After paralysis, Stephen Hawking worked even better without pencil and paper.: An American contemporary physicist with Hawking
-With certain types of problems, once a student picks up paper to solve, he loses the ability to solve : Dijkstra.
+(3) It goes on till the end.
+You array now looks like = [smallest, 2nd-smallest, ....., the least-smallest or the biggest]
+
+
+Please study the images for Selection sort.
+ 

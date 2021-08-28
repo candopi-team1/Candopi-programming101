@@ -1,0 +1,28 @@
+HOW TO LEARN ALGORITHMS
+
+PART 1: Selection
+1. You select by reputation, looks and feels.
+2.You select by running a given code. These days you get about 3000-plus new math research papers every week.
+  In biology/medicine field, according Yancopolous(of Rengenron), 60 to 90 % research reports are either irrelevant or wrong! 
+
+
+
+PART 2: Learning
+These great scientists disagree:
+1. I work on/with the paper : Feynman.
+2. Pencil-paper simulation is the most painless method to learn algorithms: Donald Knuth
+
+3. No scientist thinks in equations: Einstein.
+4. After paralysis, Stephen Hawking worked even better without pencil and paper.: An American contemporary physicist with Hawking
+5. With certain types of problems, once a student picks up paper to solve, he loses the ability to solve it : Edgar Dijkstra.
+
+Both groups are right. 
+(1) You must run the code on paper. 
+(2) But at certain spots, that will get you into trouble (just as Dijkstra warned.) 
+Then, you run it in your mind, especially the conditions, corner cases, edge cases. 
+
+
+REMEMBER the whole field is small. Technology moves super-slowly, as Steve Jobs kept saying.
+So if you cannot learn an algorithm today, it means nothing.
+Learning it today or learning it 3 months later  or 3 years later, makes ZERO different.
+These algorithms are invented or discovered 1 in every decade. You have time. 

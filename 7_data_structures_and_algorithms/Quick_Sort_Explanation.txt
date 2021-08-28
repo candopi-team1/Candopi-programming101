@@ -1,7 +1,3 @@
-No scientist thinks in equations: Einstein.
-I work on the paper : Feynman.
-Pencil-paper simulation is the most painless method: Donald Knuth
+Study Recursion first.
 
-
-After paralysis, Stephen Hawking worked even better without pencil and paper.: An American contemporary physicist with Hawking
-With certain types of problems, once a student picks up paper to solve, he loses the ability to solve : Dijkstra.
+WE WILL ADD EXPLANATIONS SOON.

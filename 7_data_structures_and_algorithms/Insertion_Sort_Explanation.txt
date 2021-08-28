@@ -1,7 +1,9 @@
-No scientist thinks in equations: Einstein.
-I work on the paper : Feynman.
-Pencil-paper simulation is the most painless method: Donald Knuth
+(1) Assume that any element is the smallest. Call it "value."
+Inner loop makes space for that value, by moving bigger element to the right one-by-one.
+Thus, a sorted sublist starts building at the start of your array.
+
+(2) Outer loop resumes and goes on till the end.
 
 
-After paralysis, Stephen Hawking worked even better without pencil and paper.: An American contemporary physicist with Hawking
-With certain types of problems, once a student picks up paper to solve, he loses the ability to solve : Dijkstra.
+Please study the images for Insertion sort.
+ 
