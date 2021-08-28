@@ -1,7 +1,0 @@
-[80, 88, 64, 25, 20, 21]
-Partition gets    ... List= [80, 88, 64, 25, 20, 21] , pv= 64 , R= 5 , L= 0
-swap 21  and  80
-swap 20  and  88
-swap 25  and  64
-Partition returns ... List= [21, 20, 25, 64, 88, 80] , pv= 64 , R= 2 , L= 3
-[21, 20, 25, 64, 88, 80]

@@ -1,6 +1,0 @@
-[21, 3, 2, 1, 5, 8, 11, 9, 4]
-Partition gets    ... List= [21, 3, 2, 1, 5, 8, 11, 9, 4] , pv= 5 , R= 8 , L= 0
-swap 4  and  21
-swap 5  and  5
-Partition returns ... List= [4, 3, 2, 1, 5, 8, 11, 9, 21] , pv= 5 , R= 3 , L= 5
-[4, 3, 2, 1, 5, 8, 11, 9, 21]
