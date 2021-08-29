@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+   <title>Factorial </title> 
+</head>
+
+ <body>
+<h2>Factorial</h2>
+
+<form name="form1">
+  Value1:        <input type="text" name="val1"><br>
+  <input type="button" name="calc" value="Do it" onclick="recur_start(form1)">
+<br><br>
+<br><br>
+Results:<input type="text" name="results1" id="results1">
+
+</form>
+
+
+<br>
+<h2>Analyzing Results</h2>
+<div id="solution1"></div>
+      
+<script type="text/javascript">
+function recur_start(formObj){
+  var val1 = parseFloat(formObj.val1.value);
+
+  document.getElementById("solution1").innerHTML ='';
+
+  var v_ret=factorial(val1, val1);
+
+  formObj.results1.value = v_ret;
+  document.getElementById("solution1").innerHTML += "<br><br> ===> " +v_ret;
+ 
+  return;
+}
+
+
+function factorial(x, last) {
+
+    // if number is 0
+    if (x === 0) {
+        return 1;
+    }
+
+    // if number is positive
+    else {
+        if (x== last){ document.getElementById("solution1").innerHTML += x;        }
+        else{          document.getElementById("solution1").innerHTML += " x " +x; }
+
+        return x * factorial(x - 1);
+    }
+}
+
+
+</script>
+
+
+ </body>
+</html>

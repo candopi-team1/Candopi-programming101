@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>  Recursion 1: Count to Zero  </title> 
+</head>
+
+ <body>
+<h2>Recursion 1: Count to Zero</h2>
+
+<p>A recursive function is a function that calls itself until it meets some condition and stops calling.</p>
+<p>A recursive function always has a condition that stops the function from calling itself.</p>
+<br>
+
+<form name="form1">
+  Number to count from:        <input type="text" name="val5"><br><br>
+
+  <input type="button" name="calc" value="Do it" onclick="recur_start(form1)">
+  <br><br>
+</form>
+
+<br>
+
+
+<h2>Analyzing Results</h2>
+<div id="solution1"></div>
+      
+
+
+<script type="text/javascript">
+function recur_start(formObj){
+  var val5 = parseFloat(formObj.val5.value);
+
+  document.getElementById("solution1").innerHTML ='';
+  recur1(val5);  
+  return;
+}
+
+
+function recur1(n) {
+    // base case. Stop at 0
+    if (n <= -1) {
+        return; // stop the function
+    } else {
+        if(n == 0){ document.getElementById("solution1").innerHTML +=  n; }
+        else{document.getElementById("solution1").innerHTML        += n  +' ,' }
+
+        // OK console.log(n);  
+        recur1(n - 1); // count down 1
+    }
+}
+
+
+</script>
+
+
+ </body>
+</html>

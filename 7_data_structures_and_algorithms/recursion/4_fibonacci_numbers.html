@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+   <title>  Fibonacci Numbers  </title> 
+ <style>
+     #solution1, #solution2{
+        margin:0.2em; padding:2em;
+        background-color: #bbcada;
+        white-space:pre;
+     }
+    </style>
+
+</head>
+
+ <body>
+<h2>Fibonacci Numbers</h2>
+<p>Generate fibonacci series up to a certain number, iteratively.</p>
+
+<form name="form1">
+  Limiting Number:        <input type="text" name="val1"><br><br>
+
+  <input type="button" name="calc" value="Get it Straight" onclick="fibo_start(form1)">
+  <br><br>
+   Results &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 
+   <input type="text" name="results1" id="results1">
+</form>
+<br>
+
+<h2>Analyzing Results</h2><div id="solution1"></div>   
+
+
+<br><hr><br>
+
+<p>Get the first n Fibonacci numbers, recursively.</p>
+<p>CREDIT:  <a href="https://www.w3resource.com/javascript-exercises/javascript-recursion-function-exercise-6.php"> w3resource </a></p>
+<form name="form2">
+  How Many Numbers?:        <input type="text" name="val1"><br><br>
+  <input type="button" name="calc" value="Get it Recursive" onclick="fibo_recur_start(form2)">
+  <br><br>
+
+   Results &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+   :<textarea name="results1" id="results1" cols="92" rows="15"></textarea>
+</form>
+<br>
+
+
+<h2>Analyzing Results</h2><div id="solution2"></div>
+      
+
+
+<script type="text/javascript">
+
+function fibo_start(formObj){
+  var val1 = parseFloat(formObj.val1.value);
+  document.getElementById("solution1").innerHTML ='';
+  document.getElementById("solution2").innerHTML ='';
+
+
+  var val_ret=fibonacci_straight(val1);
+  formObj.results1.value = val_ret;
+  document.getElementById("solution1").innerHTML +="Final Term: "+val_ret + ". It's now larger than your given number " + val1;
+
+  return;
+}
+
+function fibo_recur_start(formObj){
+  var val1 = parseFloat(formObj.val1.value);
+  document.getElementById("solution1").innerHTML ='';
+  document.getElementById("solution2").innerHTML ='';
+
+  var val_ret=fibonacci_recur(val1);
+  formObj.results1.value = val_ret;
+  document.getElementById("solution2").innerHTML +="The Numbers: "+val_ret  +  "\r\n";;
+  document.getElementById("solution2").innerHTML +=" Count of numbers, not counting Zero: "+ ( val_ret.length -1);
+
+
+  return;
+}
+
+
+// take input from the user
+// const number = parseInt(prompt('Enter a positive number: '));
+
+function fibonacci_straight(number){
+   let n1 = 0, n2 = 1, nextTerm;
+
+   document.getElementById("solution1").innerHTML +='Fibonacci Series:' +  "\r\n";
+   document.getElementById("solution1").innerHTML += "First  Term: "+ n1 +  "\r\n";
+   document.getElementById("solution1").innerHTML += "Second Term: "+n2+  "\r\n";
+
+   nextTerm = n1 + n2;
+
+   while (nextTerm <= number) {
+       // print the next term
+      document.getElementById("solution1").innerHTML += nextTerm+  "\r\n";
+
+       n1 = n2;
+       n2 = nextTerm;
+       nextTerm = n1 + n2;
+   }
+   return nextTerm  
+}
+
+
+
+// https://www.w3resource.com/javascript-exercises/javascript-recursion-function-exercise-6.php
+function fibonacci_recur(n) {
+  if (n===1)   {
+    return [0, 1];
+
+  }   else   {
+    var s = fibonacci_recur(n - 1);
+    s.push(s[s.length - 1] + s[s.length - 2]);
+    return s;
+  }
+
+};
+
+
+</script>
+
+
+ </body>
+</html>

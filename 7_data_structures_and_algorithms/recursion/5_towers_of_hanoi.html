@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+<meta charset="utf-8" />
+
+   <title>  Towers of Hanoi  </title> 
+   <style>
+      #solution1, #solution2{
+          margin:0.2em; padding:2em;
+          background-color: #bbcada;
+          white-space:pre;
+       }
+    </style>
+
+</head>
+
+ <body>
+
+<p>This puzzle uses 3 poles and a few disks of different sizes. </p>
+<p>You move all the disks from the first pole to the third pole according to the following rules : <br>
+
+1.&nbsp; Only one disk can be moved at a time. <br>
+2.&nbsp; You can only move the top disc in a stack. <br>
+3.&nbsp; No disk may be placed on top of a smaller disk. <br>
+
+</p>
+<br>
+
+<form name="form1">
+ <label> Begin with 3, A, C , b. </label><br>
+  Number of Disk :        <input type="text" name="val1"><br>
+  Source&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   :        <input type="text" name="source"><br>
+  Destination &nbsp; &nbsp; &nbsp; &nbsp;  :         <input type="text" name="dest"><br>
+  Spare/Temp  &nbsp; &nbsp; &nbsp;&nbsp;   :        <input type="text" name="spare"><br><br>
+
+
+  <input type="button" name="calc" value="Do it" onclick="hanoi_start(form1)">
+  &nbsp;&nbsp; &nbsp;  <input type="button" name="calc" value="Another Way" onclick="stepsToSolveHanoiT(3, 'A', 'C', 'B')">
+
+</form>
+
+
+
+<br>
+<h2>Analyzing Results</h2>
+<div id="solution1"></div>
+<div id="solution2"></div>
+
+        
+<script type="text/javascript">
+
+function hanoi_start(formObj){
+  var val1 = parseInt(formObj.val1.value); //hanoi(3, 'A', 'C' , 'B')
+  var source  = formObj.source.value; 
+  var  dest  = formObj.dest.value; 
+  var spare  = formObj.spare.value; 
+
+  document.getElementById("solution1").innerHTML ='';
+  document.getElementById("solution2").innerHTML ='';
+
+  hanoi(val1, source, dest,spare);  
+  return;
+}
+
+ 
+// https://www.codeproject.com/Articles/679651/Tower-of-Hanoi-in-JavaScript#:~:text=The%20recursive%20algorithm%20for%20the,0%2C1%2C2)%20.
+function  moveDisk(from,to){
+    document.getElementById("solution1").innerHTML += from + "-->" + to + "\r\n";
+} 
+
+
+function hanoi(n, from, to , via){
+  if (n==0) return;
+
+  hanoi(n-1, from, via , to);
+
+  moveDisk(from,to);
+
+  // callStack.push([from,to]); // save parameters to callStack array
+  
+  hanoi(n-1, via, to , from);
+}
+
+// hanoi(3, 'A', 'C' , 'B')
+
+
+
+
+
+//  https://js-algorithms.tutorialhorizon.com/2016/01/11/tower-of-hanoi/
+'use strict';
+
+function stepsToSolveHanoiT(height, srcP, desP, bufferP) {
+  if (height >= 1) {
+
+    // Move a tower of height-1 to the buffer peg, using the destination peg.
+    stepsToSolveHanoiT(height - 1, srcP, bufferP, desP);
+
+    // Move the remaining disk to the destination peg.
+    //console.log('Move disk from Tower ', srcP, ' to Tower ', desP);
+
+    document.getElementById("solution2").innerHTML += "Move disk from Tower " + srcP + " to Tower " +  desP + "\r\n";
+
+    // Move the tower of `height-1` from the `buffer peg` to the `destination peg` using the `source peg`.        
+    stepsToSolveHanoiT(height - 1, bufferP, desP, srcP);
+  }
+  
+  return;
+}
+
+// stepsToSolveHanoiT(3, "A", "C", "B");
+
+</script>
+
+
+ </body>
+</html>
