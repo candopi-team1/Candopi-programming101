@@ -1,0 +1,94 @@
+////// dec 15, 2015
+////// Start only Mysql
+(1) 
+/opt/djangostack-1.4.5-0/mysql/bin/mysqld_safe --user=mysql &
++
+IF TO DO manage.py syncdb OR for even plain python hook up
+
+ln -s    /opt/djangostack-1.4.5-0/mysql/tmp/mysql.sock  /tmp/mysql.sock
++
+
+/opt/djangostack-1.4.5-0/mysql/bin/mysql -u root -p
+yourpassword= maxoutwins
+
+
+(2) shutdown
+/opt/djangostack-1.4.5-0/mysql/bin/mysqladmin -u root -p shutdown
+ENTER PASSWORD maxoutwins
+
+// DB ANA granting
+(1)
+mysql> 
+DROP DATABASE IF  EXISTS fbclone;
+CREATE DATABASE IF NOT EXISTS fbclone;
+GRANT ALL PRIVILEGES ON fbclone.* TO 'hmkdec'@'localhost' IDENTIFIED BY 'hmkdecpass';
+
+
+
+// Grab schema
+$ /opt/djangostack-1.4.5-0/mysql/bin/mysqldump -u root -pmaxoutwins  --databases ownersets > /tmp/ownersets_db.sql
+
+$ /opt/djangostack-1.4.5-0/mysql/bin/mysqldump -u root -pmaxoutwins  crud1  lmats_learningmate  > /tmp/crud1_db_LMate-table.txt
+
+$ /opt/djangostack-1.4.5-0/mysql/bin/mysqldump -u root -pmaxoutwins  ownersets  > /tmp/ownersets_db_backup.txt
+
+
+
+///////////////////////////////////////////////////////////////////////////
+////// dec 15, 2015
+
+
+////// to import MySQLdb
+export GAE=/opt/gae_sdks/google_appengine_1.9.9
+export PATH=/opt/djangostack-1.4.5-0/python/bin:$GAE:$GAE/lib/django-1.4/django/bin/:$PATH
+
+(1)
+>>> import MySQLdb
+
+>>> dir( MySQLdb)
+>>> dir( MySQLdb.FIELD_TYPE)
+>>> dir( MySQLdb.FIELD_TYPE.SET) --> OK, but what good does it do?
+>>> help( MySQLdb.FIELD_TYPE.SET) 
+-->
+FILE
+    /opt/djangostack-1.4.5-0/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-linux-i686.egg/MySQLdb/constants/FIELD_TYPE.py
+
+
+//////////////////////////////////////////////////////////////////////////
+
+(1)
+mysql> help
+mysql> help contents
+mysql> help Data Types
+mysql> help SET DATA TYPE  ---> confirmed, Not useful for my current purpose.
+
+(2)
+
+CREATE TABLE bought_selling_units (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(100) NOT NULL,
+  bought_rbi_ids longtext,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE selling_units (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(100) NOT NULL,
+  author_id int(11),
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=latin1;
+
+--> OK
+
+(3)
+  conn.commit()
+  # No commit => No inserts !
+  # No commit => No updates ! 
+
+
+
+
+
+
+

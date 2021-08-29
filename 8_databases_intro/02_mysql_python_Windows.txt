@@ -1,0 +1,16 @@
+//2019 May
+(1)
+FROM https://dev.mysql.com/downloads/file/?id=486089 --> mysql-installer-community-8.0.16.0.msi
+
++
+
+FROM https://www.microsoft.com/en-us/download/confirmation.aspx?id=52685
+ MS vc_redist.x64.exe 
+
+---->
+
+anywhere > "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql" -u root -p
+-->
+
+Enter password: ***********
+hoLismoK2()

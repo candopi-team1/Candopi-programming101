@@ -1,0 +1,54 @@
+//////////////// windows + linux
+mysql> SHOW DATABASES;
+mysql> USE prag001;
+mysql> SHOW TABLES;
+
+
+/// Create DB and a DB user
+
+mysql> 
+
+CREATE DATABASE IF NOT EXISTS hmk1;
+
+CREATE USER 'hmktest' IDENTIFIED BY 'hmktestpass';
+GRANT ALL ON hmk1.* TO  "hmktest";
+
+
+// Check your DB + see your tables
+
+mysql> use hmk1;
+Database changed
+mysql> show tables;
+mysql> describe abcd1;
+
+// See your table's data
+mysql> select *  from  abcd1;
+
+
+
+
+
+/////// from file to mysql FOR THIS PROJECT
+(1) 
+pushd D:\akhoe\hmk_mysql
+SET PATH=D:\opt\BitNami\djangostack-1.4.5-0\python\;%PATH%          
+
+>>> import pip
+>>> import MySQLdb
+OK
+
+///
+
+
+sql_stmt1 ='''SELECT count(id) FROM list_rater_listitem WHERE  rate =%s;'''
+cur.execute(sql_stmt1, [RATE])
+row= cur.fetchone();
+
+
+
+//
+
+
+//////////// Using file as source
+SOURCE  D:/akhoe/hmk_mysql/hmkmovies_creation.sql
+

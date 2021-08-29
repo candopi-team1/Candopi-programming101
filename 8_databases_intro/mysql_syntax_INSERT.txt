@@ -1,0 +1,90 @@
+//////////////// Inserting Data
+
+
+INSERT INTO users(name) VALUES('John');
+INSERT INTO users(name) VALUES('Sam');
+INSERT INTO users(name) VALUES('Alice');
+INSERT INTO users(name) VALUES('Mary');
+INSERT INTO users(name) VALUES('Max');
+
+INSERT INTO user_profiles(user_id, image_url) VALUES(1, 'john.jpg');
+INSERT INTO user_profiles(user_id, image_url) VALUES(2, 'sammy.jpg');
+INSERT INTO user_profiles(user_id, image_url) VALUES(3, 'alice.jpg');
+INSERT INTO user_profiles(user_id, image_url) VALUES(4, 'marry.jpg');
+INSERT INTO user_profiles(user_id, image_url) VALUES(5, 'maxout.jpg');
+
+
+INSERT INTO groups(owner_id, name) VALUES(1, "House of John");
+INSERT INTO groups(owner_id, name) VALUES(1, "John's Clan");
+INSERT INTO groups(owner_id, name) VALUES(5, "Maximus Legion");
+INSERT INTO groups(owner_id, name) VALUES(3, "Wonderland Wanderers");
+
+
+INSERT INTO friendships (friend_from, friend_to) VALUES(1, 2);
+INSERT INTO friendships (friend_from, friend_to) VALUES(1, 5);
+INSERT INTO friendships (friend_from, friend_to) VALUES(5, 2);
+
+
+
+INSERT INTO memberships (group_id, user_id) VALUES(3, 1);
+INSERT INTO memberships (group_id, user_id) VALUES(3, 2);
+INSERT INTO memberships (group_id, user_id) VALUES(3, 3);
+INSERT INTO memberships (group_id, user_id) VALUES(3, 4);
+INSERT INTO memberships (group_id, user_id) VALUES(3, 5);
+INSERT INTO memberships (group_id, user_id) VALUES(1, 3);
+INSERT INTO memberships (group_id, user_id) VALUES(2, 3);
+
+//
+INSERT INTO abcd1 ( name,  location,  price)
+VALUES('John', 'redhill', '45.67');
+INSERT INTO abcd1 ( name,  location,  price)
+VALUES('Sam', 'hougang', '43.90');
+
+INSERT INTO abcd1 ( name,  location,  price)
+VALUES('', '', '');
+
+
+////
+
+INSERT INTO PopByRegion ( Region, Population)
+VALUES('', '');
+
+INSERT INTO PopByRegion ( Region, Population)
+VALUES('Africa', '300000');
+INSERT INTO PopByRegion ( Region, Population)
+VALUES('Europe', '800000');
+INSERT INTO PopByRegion ( Region, Population)
+VALUES('Asia', '250000');
+INSERT INTO PopByRegion ( Region, Population)
+VALUES('Middle East', '100000');
+
+
+INSERT INTO PopByCountry ( Region, Country, Population)
+VALUES('', '', '');
+
+
+INSERT INTO PopByCountry ( Region, Country, Population)
+VALUES('Africa', 'Mozambique', '3000');
+INSERT INTO PopByCountry ( Region, Country, Population)
+VALUES('Europe', 'Germany', '25000');
+INSERT INTO PopByCountry ( Region, Country, Population)
+VALUES('Asia', 'India', '34000');
+INSERT INTO PopByCountry ( Region, Country, Population)
+VALUES('Middle East', 'Syria', '15000');
+
+
+
+
+////////////////////// movies DB 
+
+INSERT INTO Movies ( title, year)
+VALUES('', '');
+
+INSERT INTO Actors ( name, birthdate, fees)
+VALUES('', '', '');
+
+
+
+
+
+

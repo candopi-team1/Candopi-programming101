@@ -1,0 +1,114 @@
+//////////// Creating Tables
+
+
+CREATE TABLE users (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(100) NOT NULL,  
+  PRIMARY KEY (id)
+);
+
+
+CREATE TABLE user_profiles (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  user_id int(11) NOT NULL,
+  image_url varchar(200) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY user_id (user_id),
+  FOREIGN KEY (user_id) REFERENCES users (id)
+);
+
+
+CREATE TABLE friendships (
+     id integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
+     friend_from integer NOT NULL,
+     friend_to integer NOT NULL,
+     FOREIGN KEY (friend_from) REFERENCES users (id),
+     FOREIGN KEY (friend_to) REFERENCES users (id)
+);
+
+CREATE TABLE groups (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(100) NOT NULL,  
+  owner_id int(11) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (owner_id) REFERENCES users (id)
+);
+
+
+CREATE TABLE memberships (
+    id integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    group_id integer NOT NULL,
+    user_id integer NOT NULL,
+    UNIQUE (group_id, user_id),
+    FOREIGN KEY (group_id) REFERENCES groups (id),
+    FOREIGN KEY (user_id) REFERENCES users (id)
+);
+
+
+//////////////// Inserting Data
+
+
+INSERT INTO users(name) VALUES('John');
+INSERT INTO users(name) VALUES('Sam');
+INSERT INTO users(name) VALUES('Alice');
+INSERT INTO users(name) VALUES('Mary');
+INSERT INTO users(name) VALUES('Max');
+
+INSERT INTO user_profiles(user_id, image_url) VALUES(1, 'john.jpg');
+INSERT INTO user_profiles(user_id, image_url) VALUES(2, 'sammy.jpg');
+INSERT INTO user_profiles(user_id, image_url) VALUES(3, 'alice.jpg');
+INSERT INTO user_profiles(user_id, image_url) VALUES(4, 'marry.jpg');
+INSERT INTO user_profiles(user_id, image_url) VALUES(5, 'maxout.jpg');
+
+
+INSERT INTO groups(owner_id, name) VALUES(1, "House of John");
+INSERT INTO groups(owner_id, name) VALUES(1, "John's Clan");
+INSERT INTO groups(owner_id, name) VALUES(5, "Maximus Legion");
+INSERT INTO groups(owner_id, name) VALUES(3, "Wonderland Wanderers");
+
+
+INSERT INTO friendships (friend_from, friend_to) VALUES(1, 2);
+INSERT INTO friendships (friend_from, friend_to) VALUES(1, 5);
+INSERT INTO friendships (friend_from, friend_to) VALUES(5, 2);
+
+
+
+INSERT INTO memberships (group_id, user_id) VALUES(3, 1);
+INSERT INTO memberships (group_id, user_id) VALUES(3, 2);
+INSERT INTO memberships (group_id, user_id) VALUES(3, 3);
+INSERT INTO memberships (group_id, user_id) VALUES(3, 4);
+INSERT INTO memberships (group_id, user_id) VALUES(3, 5);
+INSERT INTO memberships (group_id, user_id) VALUES(1, 3);
+INSERT INTO memberships (group_id, user_id) VALUES(2, 3);
+
+//////////// DB Query
+SELECT image_url FROM user_profiles WHERE user_id =1;
+
+SELECT image_url FROM user_profiles
+WHERE user_id = (SELECT id FROM users WHERE name= 'John');
+
+
+SELECT name FROM groups WHERE owner_id = 1;
+SELECT name FROM groups WHERE owner_id = 3;
+SELECT name FROM groups WHERE owner_id = (SELECT id FROM users WHERE name= 'John');
+
+// john's friends
+SELECT friend_to FROM friendships WHERE friend_from = (SELECT id FROM users WHERE name= 'John');
+
+SELECT name FROM users WHERE id IN ( SELECT friend_to FROM friendships WHERE friend_from = (SELECT id FROM users WHERE name= 'John'));
+
+// groups alice joined
+
+SELECT name FROM groups WHERE id IN ( SELECT group_id FROM memberships WHERE user_id = (SELECT id FROM users WHERE name= 'Alice'));
+
+
+SELECT g.name as group_name, g.id as group_id , u.id as user_id, u.name  as username
+FROM groups g, memberships m, users u
+WHERE u.name= 'Alice' AND
+u.id = m.user_id AND
+m.group_id = g.id;
+
+
+
+
+

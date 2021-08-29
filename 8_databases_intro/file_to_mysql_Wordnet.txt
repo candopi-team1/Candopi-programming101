@@ -1,0 +1,43 @@
+/////////////////////// sept 26, 2014 --- 29 Aug 2021
+
+(1) all that stuff above.
+(2)
+mysql> 
+USE wordnet2my;
+
+
+ CREATE TABLE `wordnet_synset` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `search_word` varchar(100) NOT NULL,
+  `lemmas_names` varchar(500) NOT NULL,
+  `syn_name` varchar(100) NOT NULL,
+  `definition` longtext NOT NULL,
+  `examples` longtext NOT NULL,
+  `cgsubj` varchar(300) NOT NULL,
+  `past_occur` longtext NOT NULL,
+  `difficulty` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=latin1;
+
+====>
+
+CREATE TABLE `p6word` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `word` varchar(100) NOT NULL,
+  `definition` longtext NOT NULL,
+  `examples` longtext NOT NULL,
+
+  `past_occur` longtext NOT NULL,
+
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=latin1;
+
+
+// id, word, definition, examples, past_occur
+
+(3) p6words.txt
+
+==> ALL OK
+
+
+

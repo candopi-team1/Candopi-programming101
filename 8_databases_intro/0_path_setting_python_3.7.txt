@@ -1,0 +1,42 @@
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\8_databases_intro
+
+(1)
+python 01_sqlite_test.py
+
+
+(2) 
+Install MySQL           with  02_mysql_python_Windows.txt
+Create DB and a DB user with  03_mysql_usage.txt
+
+
+python  04_mysql_test_tablecreate.py
+
+--> Check your DB + see your tables with  03_mysql_usage.txt
+
+
+(2.2)
+python  05_mysql_test_insert.py
+--> See your table's data with  03_mysql_usage.txt
+
+
+(3)
+python  06_file_to_mysql1.py
+
+-->  mysql> select *  from p6word;
+
+
+(3.2)
+python  06_file_to_mysql2.py
+-->  mysql> select *  from p6word;
+
+
+()
+python  00_file_read.py
+
+python 00_file_write1.py
+python 00_file_write2.py
+
+
+

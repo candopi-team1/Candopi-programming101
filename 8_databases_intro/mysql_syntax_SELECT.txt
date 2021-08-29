@@ -1,0 +1,55 @@
+
+//////////// DB Query
+SELECT image_url FROM user_profiles WHERE user_id =1;
+
+SELECT image_url FROM user_profiles
+WHERE user_id = (SELECT id FROM users WHERE name= 'John');
+
+
+SELECT name FROM groups WHERE owner_id = 1;
+SELECT name FROM groups WHERE owner_id = 3;
+SELECT name FROM groups WHERE owner_id = (SELECT id FROM users WHERE name= 'John');
+
+// john's friends
+SELECT friend_to FROM friendships WHERE friend_from = (SELECT id FROM users WHERE name= 'John');
+
+SELECT name FROM users WHERE id IN ( SELECT friend_to FROM friendships WHERE friend_from = (SELECT id FROM users WHERE name= 'John'));
+
+// groups alice joined
+
+SELECT name FROM groups WHERE id IN ( SELECT group_id FROM memberships WHERE user_id = (SELECT id FROM users WHERE name= 'Alice'));
+
+
+SELECT g.name as group_name, g.id as group_id , u.id as user_id, u.name  as username
+FROM groups g, memberships m, users u
+WHERE u.name= 'Alice' AND
+u.id = m.user_id AND
+m.group_id = g.id;
+
+
+
+//// Joining Tables
+
+SELECT PopByRegion.Region, PopByCountry.Country
+From PopByRegion INNER JOIN PopByCountry
+WHERE (PopByRegion.Region = PopByCountry.Region)
+AND ((PopByCountry.Population * 1.0) / PopByRegion.Population > 0.10) ;
+
+
+//
+(1)
+SELECT   a.id, a.name, count(am.movie_id) as 'Numbers of movies'
+FROM actors   a, actor_movie  am 
+WHERE  a.id = am.actor_id
+GROUP BY am.actor_id;
+
+
+XXX order by 'Numbers of movies';
+
+(2)
+SELECT *  FROM actor_movie where actor_id = 5;
+SELECT count(movie_id)  FROM actor_movie where actor_id = 5;
+
+
+
+
