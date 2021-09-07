@@ -1,5 +1,6 @@
 SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
-PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\code_class_javascript\2000USD_6months_0USD_10days\7_data_structures_and_algorithms\quick_sort_python
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\7_data_structures_and_algorithms\quick_sort_python
+
 
 
 SET PATH=C:\Users\donate_box500\opt\my_pythons\py383;C:\Users\donate_box500\opt\my_pythons\py383\Scripts;%PATH%
@@ -50,6 +51,12 @@ codez_up takes 0.0 tiem if an already sorted list.
 (2)
 python quick_sort_SadrachPierre_Ph.D.py
 ----> Failed with an already-sorted list. Trick OK by adding 2 unsorted elements ;-)
+
+(2.2)
+python quick_sort_kotlin.py
+----> Failed with an already-sorted list. Trick OK by adding 2 unsorted elements ;-)
+
+
 
 (3) iterative solution
 python quick_sort_DiegoSalinas.py
