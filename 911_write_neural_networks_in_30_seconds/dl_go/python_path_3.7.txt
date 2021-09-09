@@ -1,0 +1,11 @@
+(1) 
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\911_write_neural_networks_in_30_seconds\dl_go
+
+
+
+(2) Run now.
+
+python run_network.py
+

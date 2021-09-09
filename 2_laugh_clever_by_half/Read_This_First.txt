@@ -1,0 +1,4 @@
+Lesson for Greed.
+
+Be secure. If you understand "lambda_filter_map_3.py", enough.
+Enough for now, and for a long time to come.

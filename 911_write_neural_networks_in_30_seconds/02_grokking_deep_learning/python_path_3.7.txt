@@ -1,0 +1,15 @@
+(1)
+SET PATH=C:\Users\<your user name>\opt\my_pythons\py383;C:\Users\<your user name>\opt\my_pythons\py383\Scripts;%PATH%
+PUSHD C:\Users\<your user name>\<PATH TO YOUR CODE>
+
+e.g.
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\911_write_neural_networks_in_30_seconds\02_grokking_deep_learning
+
+(2) Now run.
+
+python backprop1_reveals_data.py > backprop1_reveals_data.py.txt
+
+
+python c6_p130.py

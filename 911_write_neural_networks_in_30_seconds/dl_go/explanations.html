@@ -1,0 +1,69 @@
+<html>
+
+<body>
+
+<h4>We Love to Hear You</h4> <br>
+
+
+
+<img src="./images/forward_pass.jpg" alt="forward pass"  max-width="150px">
+<h3>Dense's Forward Pass</h3>
+<pre>
+ def forward(self):
+        data = self.get_forward_input()
+        self.output_data = np.dot(self.weight, data) + self.bias  # <1>
+
+</pre>
+
+
+<h3>Activation's Forward Pass</h3>
+
+<pre>
+   def forward(self):
+        data = self.get_forward_input()
+        self.output_data = sigmoid(data)  # <2>
+</pre>
+
+
+<br><br>
+
+<img src="./images/back_pass.jpg" alt="Backward pass" max-width="10em">
+<img src="https://github.com/Htet-Myat-Kyaw/deep_learning/blob/main/dl_go/images/back_pass.jpg" alt="Backward pass" max-width="10em">
+
+<h3>Dense's  Backward Pass</h3>
+<pre>
+    def backward(self):
+        data = self.get_forward_input()
+        delta = self.get_backward_input()  # <1>
+
+        self.delta_b += delta  # <2>
+
+        self.delta_w += np.dot(delta, data.transpose())  # <3>
+
+        self.output_delta = np.dot(self.weight.transpose(), delta)  # <4>
+
+</pre>
+
+<h3>Activation's Backward Pass</h3>
+
+<pre>
+
+    def backward(self):
+        delta = self.get_backward_input()
+        data = self.get_forward_input()
+        self.output_delta = delta * sigmoid_prime(data)  # <3>
+
+</pre>
+
+<br><br>
+<img src="./images/book_max_pumperla.jpg" alt="Book by Max Pumperla">
+<br><br>
+
+
+
+<img src="./images/can-rats-chew-through-concrete-02.jpg" alt="No image">
+
+
+</body>
+</html>
+

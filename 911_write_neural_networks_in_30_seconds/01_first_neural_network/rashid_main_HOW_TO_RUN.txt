@@ -1,0 +1,24 @@
+SET PATH=C:\Users\<your user name>\opt\my_pythons\py383;C:\Users\<your user name>\opt\my_pythons\py383\Scripts;%PATH%
+PUSHD C:\Users\<your user name>\<PATH TO YOUR CODE>
+
+e.g.
+(1) 
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
++
+
+Install scipy.
+
++
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\911_write_neural_networks_in_30_seconds\01_first_neural_network
+
+(2) Now run.
+
+python rashid_main.py
+
+//
+We have changed the code so that it looks like a direct translation or the mirror image of the math equation.
+That equation is in the image we uploaded here. https://github.com/Htet-Myat-Kyaw/deep_learning/blob/main/first_neural_network/backprop_equation.jpg
+
+
+
