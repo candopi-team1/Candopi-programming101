@@ -1,0 +1,23 @@
+(1)
+SET PATH=C:\Users\<your user name>\opt\my_pythons\py383;C:\Users\<your user name>\opt\my_pythons\py383\Scripts;%PATH%
+PUSHD C:\Users\<your user name>\<PATH TO YOUR CODE>
+
+e.g.
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\912_interview_for_Google_Facebook\DailyCodingProblem_hmk
+
+
+(2) Now run.
+
+python  ch13_dyn_prog_house_paint2.py
+python  ch13_dyn_prog_house_paint3.py
+
+
+python  ch14_backtrack_android_unlock.py
+python  ch14_backtrack_nqueens.py
+python  ch14_backtrack_sudoku.py
+
+
+
+python  ch19_advanced_algos_hierholzer.py

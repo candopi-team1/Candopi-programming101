@@ -1,0 +1,14 @@
+(1)
+SET PATH=C:\Users\<your user name>\opt\my_pythons\py383;C:\Users\<your user name>\opt\my_pythons\py383\Scripts;%PATH%
+PUSHD C:\Users\<your user name>\<PATH TO YOUR CODE>
+
+e.g.
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\912_interview_for_Google_Facebook\DailyCodingProblem_k\randomized_algos
+
+(2) Now run.
+
+python markov_chain.py
+
+ 

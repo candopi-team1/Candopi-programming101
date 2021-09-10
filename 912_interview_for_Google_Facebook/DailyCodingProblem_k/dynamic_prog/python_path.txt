@@ -1,0 +1,28 @@
+(1)
+SET PATH=C:\Users\<your user name>\opt\my_pythons\py383;C:\Users\<your user name>\opt\my_pythons\py383\Scripts;%PATH%
+PUSHD C:\Users\<your user name>\<PATH TO YOUR CODE>
+
+e.g.
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\912_interview_for_Google_Facebook\DailyCodingProblem_k\dynamic_prog
+
+
+(2) Now run.
+
+python house_paint_19.py
+
+python string_decode_dynamic_pg163.py
+python string_decode_recursion_pg163.py
+
+python staircase_recur_pg16.py
+python staircase_dynamic_pg161.py
+
+
+python coin_ways_topdown_memoize.py
+python coin_ways_bottomup_loop.py
+
+
+
+
+ 
