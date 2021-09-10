@@ -1,0 +1,321 @@
+Moving disk 1 from  A  to  B
+A  =  ['whale', 'elephant', 'horse', 'goat', 'hen']
+C  =  []
+B  =  ['frog']
+
+Moving disk 2 from  A  to  C
+A  =  ['whale', 'elephant', 'horse', 'goat']
+B  =  ['frog']
+C  =  ['hen']
+
+Moving disk 1 from  B  to  C
+B  =  []
+A  =  ['whale', 'elephant', 'horse', 'goat']
+C  =  ['hen', 'frog']
+
+Moving disk 3 from  A  to  B
+A  =  ['whale', 'elephant', 'horse']
+C  =  ['hen', 'frog']
+B  =  ['goat']
+
+Moving disk 1 from  C  to  A
+C  =  ['hen']
+B  =  ['goat']
+A  =  ['whale', 'elephant', 'horse', 'frog']
+
+Moving disk 2 from  C  to  B
+C  =  []
+A  =  ['whale', 'elephant', 'horse', 'frog']
+B  =  ['goat', 'hen']
+
+Moving disk 1 from  A  to  B
+A  =  ['whale', 'elephant', 'horse']
+C  =  []
+B  =  ['goat', 'hen', 'frog']
+
+Moving disk 4 from  A  to  C
+A  =  ['whale', 'elephant']
+B  =  ['goat', 'hen', 'frog']
+C  =  ['horse']
+
+Moving disk 1 from  B  to  C
+B  =  ['goat', 'hen']
+A  =  ['whale', 'elephant']
+C  =  ['horse', 'frog']
+
+Moving disk 2 from  B  to  A
+B  =  ['goat']
+C  =  ['horse', 'frog']
+A  =  ['whale', 'elephant', 'hen']
+
+Moving disk 1 from  C  to  A
+C  =  ['horse']
+B  =  ['goat']
+A  =  ['whale', 'elephant', 'hen', 'frog']
+
+Moving disk 3 from  B  to  C
+B  =  []
+A  =  ['whale', 'elephant', 'hen', 'frog']
+C  =  ['horse', 'goat']
+
+Moving disk 1 from  A  to  B
+A  =  ['whale', 'elephant', 'hen']
+C  =  ['horse', 'goat']
+B  =  ['frog']
+
+Moving disk 2 from  A  to  C
+A  =  ['whale', 'elephant']
+B  =  ['frog']
+C  =  ['horse', 'goat', 'hen']
+
+Moving disk 1 from  B  to  C
+B  =  []
+A  =  ['whale', 'elephant']
+C  =  ['horse', 'goat', 'hen', 'frog']
+
+Moving disk 5 from  A  to  B
+A  =  ['whale']
+C  =  ['horse', 'goat', 'hen', 'frog']
+B  =  ['elephant']
+
+Moving disk 1 from  C  to  A
+C  =  ['horse', 'goat', 'hen']
+B  =  ['elephant']
+A  =  ['whale', 'frog']
+
+Moving disk 2 from  C  to  B
+C  =  ['horse', 'goat']
+A  =  ['whale', 'frog']
+B  =  ['elephant', 'hen']
+
+Moving disk 1 from  A  to  B
+A  =  ['whale']
+C  =  ['horse', 'goat']
+B  =  ['elephant', 'hen', 'frog']
+
+Moving disk 3 from  C  to  A
+C  =  ['horse']
+B  =  ['elephant', 'hen', 'frog']
+A  =  ['whale', 'goat']
+
+Moving disk 1 from  B  to  C
+B  =  ['elephant', 'hen']
+A  =  ['whale', 'goat']
+C  =  ['horse', 'frog']
+
+Moving disk 2 from  B  to  A
+B  =  ['elephant']
+C  =  ['horse', 'frog']
+A  =  ['whale', 'goat', 'hen']
+
+Moving disk 1 from  C  to  A
+C  =  ['horse']
+B  =  ['elephant']
+A  =  ['whale', 'goat', 'hen', 'frog']
+
+Moving disk 4 from  C  to  B
+C  =  []
+A  =  ['whale', 'goat', 'hen', 'frog']
+B  =  ['elephant', 'horse']
+
+Moving disk 1 from  A  to  B
+A  =  ['whale', 'goat', 'hen']
+C  =  []
+B  =  ['elephant', 'horse', 'frog']
+
+Moving disk 2 from  A  to  C
+A  =  ['whale', 'goat']
+B  =  ['elephant', 'horse', 'frog']
+C  =  ['hen']
+
+Moving disk 1 from  B  to  C
+B  =  ['elephant', 'horse']
+A  =  ['whale', 'goat']
+C  =  ['hen', 'frog']
+
+Moving disk 3 from  A  to  B
+A  =  ['whale']
+C  =  ['hen', 'frog']
+B  =  ['elephant', 'horse', 'goat']
+
+Moving disk 1 from  C  to  A
+C  =  ['hen']
+B  =  ['elephant', 'horse', 'goat']
+A  =  ['whale', 'frog']
+
+Moving disk 2 from  C  to  B
+C  =  []
+A  =  ['whale', 'frog']
+B  =  ['elephant', 'horse', 'goat', 'hen']
+
+Moving disk 1 from  A  to  B
+A  =  ['whale']
+C  =  []
+B  =  ['elephant', 'horse', 'goat', 'hen', 'frog']
+
+Moving disk 6 from  A  to  C
+A  =  []
+B  =  ['elephant', 'horse', 'goat', 'hen', 'frog']
+C  =  ['whale']
+
+Moving disk 1 from  B  to  C
+B  =  ['elephant', 'horse', 'goat', 'hen']
+A  =  []
+C  =  ['whale', 'frog']
+
+Moving disk 2 from  B  to  A
+B  =  ['elephant', 'horse', 'goat']
+C  =  ['whale', 'frog']
+A  =  ['hen']
+
+Moving disk 1 from  C  to  A
+C  =  ['whale']
+B  =  ['elephant', 'horse', 'goat']
+A  =  ['hen', 'frog']
+
+Moving disk 3 from  B  to  C
+B  =  ['elephant', 'horse']
+A  =  ['hen', 'frog']
+C  =  ['whale', 'goat']
+
+Moving disk 1 from  A  to  B
+A  =  ['hen']
+C  =  ['whale', 'goat']
+B  =  ['elephant', 'horse', 'frog']
+
+Moving disk 2 from  A  to  C
+A  =  []
+B  =  ['elephant', 'horse', 'frog']
+C  =  ['whale', 'goat', 'hen']
+
+Moving disk 1 from  B  to  C
+B  =  ['elephant', 'horse']
+A  =  []
+C  =  ['whale', 'goat', 'hen', 'frog']
+
+Moving disk 4 from  B  to  A
+B  =  ['elephant']
+C  =  ['whale', 'goat', 'hen', 'frog']
+A  =  ['horse']
+
+Moving disk 1 from  C  to  A
+C  =  ['whale', 'goat', 'hen']
+B  =  ['elephant']
+A  =  ['horse', 'frog']
+
+Moving disk 2 from  C  to  B
+C  =  ['whale', 'goat']
+A  =  ['horse', 'frog']
+B  =  ['elephant', 'hen']
+
+Moving disk 1 from  A  to  B
+A  =  ['horse']
+C  =  ['whale', 'goat']
+B  =  ['elephant', 'hen', 'frog']
+
+Moving disk 3 from  C  to  A
+C  =  ['whale']
+B  =  ['elephant', 'hen', 'frog']
+A  =  ['horse', 'goat']
+
+Moving disk 1 from  B  to  C
+B  =  ['elephant', 'hen']
+A  =  ['horse', 'goat']
+C  =  ['whale', 'frog']
+
+Moving disk 2 from  B  to  A
+B  =  ['elephant']
+C  =  ['whale', 'frog']
+A  =  ['horse', 'goat', 'hen']
+
+Moving disk 1 from  C  to  A
+C  =  ['whale']
+B  =  ['elephant']
+A  =  ['horse', 'goat', 'hen', 'frog']
+
+Moving disk 5 from  B  to  C
+B  =  []
+A  =  ['horse', 'goat', 'hen', 'frog']
+C  =  ['whale', 'elephant']
+
+Moving disk 1 from  A  to  B
+A  =  ['horse', 'goat', 'hen']
+C  =  ['whale', 'elephant']
+B  =  ['frog']
+
+Moving disk 2 from  A  to  C
+A  =  ['horse', 'goat']
+B  =  ['frog']
+C  =  ['whale', 'elephant', 'hen']
+
+Moving disk 1 from  B  to  C
+B  =  []
+A  =  ['horse', 'goat']
+C  =  ['whale', 'elephant', 'hen', 'frog']
+
+Moving disk 3 from  A  to  B
+A  =  ['horse']
+C  =  ['whale', 'elephant', 'hen', 'frog']
+B  =  ['goat']
+
+Moving disk 1 from  C  to  A
+C  =  ['whale', 'elephant', 'hen']
+B  =  ['goat']
+A  =  ['horse', 'frog']
+
+Moving disk 2 from  C  to  B
+C  =  ['whale', 'elephant']
+A  =  ['horse', 'frog']
+B  =  ['goat', 'hen']
+
+Moving disk 1 from  A  to  B
+A  =  ['horse']
+C  =  ['whale', 'elephant']
+B  =  ['goat', 'hen', 'frog']
+
+Moving disk 4 from  A  to  C
+A  =  []
+B  =  ['goat', 'hen', 'frog']
+C  =  ['whale', 'elephant', 'horse']
+
+Moving disk 1 from  B  to  C
+B  =  ['goat', 'hen']
+A  =  []
+C  =  ['whale', 'elephant', 'horse', 'frog']
+
+Moving disk 2 from  B  to  A
+B  =  ['goat']
+C  =  ['whale', 'elephant', 'horse', 'frog']
+A  =  ['hen']
+
+Moving disk 1 from  C  to  A
+C  =  ['whale', 'elephant', 'horse']
+B  =  ['goat']
+A  =  ['hen', 'frog']
+
+Moving disk 3 from  B  to  C
+B  =  []
+A  =  ['hen', 'frog']
+C  =  ['whale', 'elephant', 'horse', 'goat']
+
+Moving disk 1 from  A  to  B
+A  =  ['hen']
+C  =  ['whale', 'elephant', 'horse', 'goat']
+B  =  ['frog']
+
+Moving disk 2 from  A  to  C
+A  =  []
+B  =  ['frog']
+C  =  ['whale', 'elephant', 'horse', 'goat', 'hen']
+
+Moving disk 1 from  B  to  C
+B  =  []
+A  =  []
+C  =  ['whale', 'elephant', 'horse', 'goat', 'hen', 'frog']
+
+frog
+hen
+goat
+horse
+elephant
+whale

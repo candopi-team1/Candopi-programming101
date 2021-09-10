@@ -1,0 +1,17 @@
+(1)
+SET PATH=C:\Users\<your user name>\opt\my_pythons\py383;C:\Users\<your user name>\opt\my_pythons\py383\Scripts;%PATH%
+PUSHD C:\Users\<your user name>\<PATH TO YOUR CODE>
+
+e.g.
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\7_data_structures_and_algorithms\recursion_python
+
+(2) Now run.
+
+python big_recursive_idea.py
+python recursive_factorial.py
+
+python tower_recur.py > tower_recur_Test.txt
+
+python  tower_using_stack.py   > tower_stack_Test.txt
