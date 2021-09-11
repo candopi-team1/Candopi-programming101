@@ -1,0 +1,11 @@
+SET PATH=C:\Users\kyaw_kyaw_nnaing\opt\Python37;C:\Users\kyaw_kyaw_nnaing\opt\Python37\Scripts;%PATH%
+
+
+PUSHD C:\Users\kyaw_kyaw_nnaing\Desktop\candopi_programming101\2_laugh_clever_by_half
+
+
+
+python  lambda_filter_map_3.py
+
+python  lambda_filter_map_2.py
+python  lambda_filter_map_1.py
