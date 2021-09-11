@@ -1,29 +1,28 @@
-BENEFITS:
+We are world best, because we have beautifully fused computer science with teaching methodology and fear-conquering psychology.
+We are world best --- in every meaningful way. 
+It is stupid to judge without trying our 'food' --- for free, for a few minutes.  
 
-You can become a software billionaire, a great data scientist or anything in between.
 
-You become ready to explore more, master more.
+When you were very young, or when you are free from fear, you act natural.
+Natural means --- you look around, move around, and touch/move/change things here and there.
 
-(1) As you can see in my own examples (Java, C++, Python, Ruby, Kotlin in the folders : /7_data_structures_and_algorithms/sorts_python and /7_data_structures_and_algorithms/quick_sort_python), JavaScript you learn here is very close to any other language: Java, C++, Python, PHP, Ruby or any other.
+Behave the same way in programming.
+Change the codes any way you like. The more mistakes you make, the sooner you learn.
 
-(2) Moving to Web development, Mobile development, app development, blockchain development etc, too is smooth and easy.
+As long as you have a back up copy, as long as you can "undo" (Ctrl+Z thing), you are ok.
+The computer won't burn and get smoky. It won't explode into you face. So, relax, have fun.
 
-(3) Moving to AI, Machine Learning, Data Science etc, too is smooth and easy. (But you need a bit of math, at least A-level, or US high school level.) e.g. Neural networks, Convolutional networks (CNN), RNN, Capsule networks, One-Shot, Few-Shots etc are also made up of "while" and "for" loops you learn here.
 
-COSTS:
+Ask, how is this fun? It will become fun. 
 
-(1) The course is very easy, even for primary school students.
-
-(2) You don't need any experience.
-
-(3) You do zero installation.
-
-(4) The course takes just 20 to 40 hours. And zero fees.
 
 IF YOU GET INTO TROUBLE:
 
-(1) Say this mantra 3 times: "I'm alright. This person cannot teach. I will find a better teacher, a better book."
+(1) Say this mantra 3 times: "I'm alright. This person cannot teach. I will find a better teacher, a better book." 
+    You will find millions.
 
-As the great George Polya says, emotions is a big part of math teaching. Or any STEM teaching in general. Blame us. Don't blame yourself. Do you think we are Gods who can never err?
+As the great George Polya says, emotions is a big part of math teaching. Or any STEM teaching in general. Blame us. Don't blame yourself. 
+Do you think we are Gods who can never err?
 
 (2) Better still, tell us. We can, we will change this a million times for our students' sake. Try us.
+
